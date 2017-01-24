@@ -1,0 +1,681 @@
+/**
+ * Blog styles
+ */
+
+input[name="post_password"] {
+    margin-bottom: 15px;
+}
+
+#yumecommerce-page {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 770px;
+}
+
+.page-template-template-full-width #yumecommerce-page {
+    max-width: 100%;
+}
+
+body:not(.woocommerce-page) {
+    h1:not(.main-title), h2, h3, h4:not(.yumecommerce-post-date), h5, h6 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    article, .yumecommerce-post-intro {
+        table {
+            margin-bottom: 20px;
+
+            thead tr {
+                background: #f5f5f5;
+            }
+
+            th, td {
+                padding: 5px 10px;
+                border: 1px solid #f5f5f5;
+            }
+
+            tr:nth-child(odd) {
+                background: #fcfcfc;
+            }
+        }
+
+        figure {
+            &.alignnone {
+                margin: 20px auto 30px;
+            }
+        }
+    }
+}
+
+/* wordpress style */
+img.alignleft,
+.woocommerce img.alignleft {
+    float: none;
+    margin: 20px auto 25px;
+    display: block;
+    width: auto;
+}
+
+img.alignright,
+.woocommerce img.alignright {
+    float: none;
+    margin: 20px auto 25px;
+    display: block;
+    width: auto;
+}
+
+img.aligncenter,
+.woocommerce img.aligncenter {
+    margin: 30px auto;
+    display: block;
+}
+
+figure.wp-caption img {
+    width: auto;
+}
+
+figure.wp-caption.alignleft {
+    margin: 20px auto 30px;
+    width: auto !important;
+    float: none;
+}
+
+figure.wp-caption.alignright {
+    margin: 20px auto 30px;
+    width: auto !important;
+    float: none;
+}
+
+figure.wp-caption.aligncenter {
+    margin: 0 auto 30px;
+    width: auto !important;
+    text-align: center;
+
+    figcaption {
+        text-align: left;
+    }
+}
+
+.wp-caption figcaption {
+    font-size: .85em;
+    opacity: .6;
+}
+
+@media (min-width: 500px) {
+    img.alignleft,
+    .woocommerce img.alignleft {
+        float: left;
+        margin-right: 30px;
+        margin-top: 10px;
+    }
+
+
+    img.alignright,
+    .woocommerce img.alignright {
+        float: right;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    figure.wp-caption.alignleft {
+        margin: 10px 30px 30px 0;
+        float: left;
+
+    }
+
+    figure.wp-caption.alignright {
+        margin: 10px 0 30px 30px;
+        float: right;
+    }
+}
+
+.main-title {
+    text-align: center;
+    position: relative;
+    padding: 0 0 15px;
+    line-height: 1.1;
+    margin: 40px 0 50px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 2px;
+        background: #f0f0f0;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        bottom: 0;
+    }
+}
+
+.single-post {
+    .main-title {
+        margin-bottom: 10px;
+    }
+
+    .yumecommerce-post-date {
+        display: block;
+        position: relative;
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 35px;
+    }
+
+    .yumecommerce-post-meta {
+        margin: 30px 0;
+        float: left;
+        width: auto;
+    }
+
+    .addtoany_share_save_container {
+        display: none;
+
+        @media (min-width: 990px) {
+            display: block;
+        }
+
+        &.addtoany_content_bottom {
+            float: right;
+            margin: 40px 0;
+            transform: scale(0.85);
+            transform-origin: top right;
+        }
+    }
+
+    .yumecommerce-post-date {
+        font-size: 90%;
+    }
+}
+
+.taxonomy-description p {
+    margin-top: 0;
+}
+
+.yumecommerce-post-container {
+    margin-bottom: 30px;
+    padding-bottom: 35px;
+
+    .yumecommerce-post-link {
+        display: block;
+    }
+}
+
+.yumecommerce-post-link .yumecommerce-post-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.yumecommerce-post-thumbnail {
+    margin: 0 -15px 15px;
+
+    div {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0px;
+        /* fix webkit border-radius and overflow bug */
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+
+        @media (min-width: 992px) {
+            border-radius: 4px;
+        }
+
+        img {
+            transform: scale(1);
+            transition: transform 10s cubic-bezier(0.03, 1, 0, 0.85);
+        }
+    }
+
+    img {
+        display: block !important;
+        border-radius: 0px;
+
+        @media (min-width: 768px) {
+            border-radius: 4px;
+        }
+    }
+
+    figcaption {
+        padding: 5px 0 0 15px;
+        font-size: 75%;
+        line-height: 1.3;
+        margin-top: 14px;
+        font-style: italic;
+    }
+}
+
+.yumecommerce-post-link .yumecommerce-post-thumbnail div img {
+    transform: scale(1);
+    transition: 3.2s ease-in-out transform;
+}
+
+.yumecommerce-post-link:hover .yumecommerce-post-thumbnail div img {
+    transform: scale(1.15);
+    transition-duration: 12s;
+    transition-timing-function: cubic-bezier(0.03, 1, 0, 0.85);
+}
+
+.yumecommerce-post-comments {
+    float: right;
+    text-align: right;
+}
+
+.yumecommerce-post-tags {
+    float: left;
+    padding-left: 10px;
+    border-left: 2px solid #dab98d;
+
+    a {
+        border: none;
+    }
+}
+
+.yumecommerce-post-tags,
+.yumecommerce-post-comments {
+    line-height: 1;
+}
+
+.yumecommerce-post-meta {
+    margin-top: 1.8em;
+
+    &:after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+
+.yumecommerce-post-meta,
+ul#comment-list .comment-meta,
+.yumecommerce-post-date {
+    font-size: 80%;
+}
+
+.comment-meta {
+    padding-bottom: 8px;
+
+    a {
+    border: none;
+
+        &:hover {
+            border: none;
+        }
+    }
+}
+
+.yumecommerce-post-pagination .screen-reader-text,.address-will-not-be-published,.comment-awaiting-moderation {
+    font-size: 80%;
+    opacity: .3;
+    margin-top: 0;
+}
+
+.comment-awaiting-moderation {
+    margin-bottom: 0;
+}
+
+.yumecommerce-post-pagination .nav-links > * {
+    margin-right: 10px;
+}
+
+ul#comment-list {
+    list-style: none;
+    padding: 0;
+
+    .bypostauthor .comment-content {
+        font-weight: 600;
+    }
+
+    .comment-metadata {
+        line-height: 1;
+
+        a {
+            line-height: 1.2;
+            margin-top: 5px;
+        }
+
+        .edit-link {
+            display: block;
+            float: right;
+        }
+    }
+
+    .comment-body:after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+
+    ul.children {
+        list-style: none;
+        padding-left: 30px;
+    }
+
+    .comment-body, .comment-navigation {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+    }
+
+    .reply, .comment-meta, .comment-content {
+        width: 100%;
+        float: left;
+    }
+
+    .comment-meta .comment-author {
+        padding-right: 5px;
+
+        b {
+            display: block;
+        }
+
+        .says {
+            display: none;
+        }
+    }
+}
+
+.show-avatars ul#comment-list {
+    .comment-content p {
+        margin-top: 0;
+    }
+    
+    .comment-author span {
+        display: none
+    }
+    
+    .comment-meta {
+        width: 100%;
+    }
+
+    .comment-metadata .edit-link {
+        float: none;
+        margin-top: 14px;
+    }
+    
+    .comment-content,
+    .reply {
+        width: 100%;
+        float: right;
+    }
+
+    @media (min-width: 768px) {
+
+        .comment-meta {
+            width: 15%;
+
+            .comment-author b {
+                line-height: 1.4;
+                padding-top: 5px;
+                padding-bottom: 10px;
+            }
+        }
+
+        .comment-content,
+        .reply {
+            width: 80%;
+        }
+    }
+}
+
+ul.post-categories {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+}
+
+.reply a.comment-reply-link {
+    border: none;
+}
+
+#yumecommerce-comments {
+    margin-top: 40px;
+    width: 100%;
+    float: left;
+
+    .comments-title {
+        margin-bottom: 30px;
+    }
+}
+
+#commentform .comment-form-comment label,
+.screen-reader-text {
+    display: none;
+}
+
+.post-navigation {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 0 46px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    clear: both;
+
+    a {
+        position: relative;
+        margin: 0 15px;
+        display: inline-block;
+        border: 0;
+
+        @media (min-width: 768px) {
+            margin: 0 35px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        padding: 40px 0;
+    }
+}
+
+.author-title a,
+.yumecommerce-post-comments a,
+.yumecommerce-post-intro a.more-link,
+.reply a.comment-reply-link {
+    position: relative;
+    display: inline-block;
+}
+
+a.author-link {
+    border: none;
+}
+
+.post-navigation a:before,
+.author-title a:before,
+.yumecommerce-post-comments a:before,
+.yumecommerce-post-intro a.more-link:before,
+.reply a.comment-reply-link:before {
+    position: absolute;
+    bottom: -6px;
+    height: 2px;
+    width: 100%;
+    display: block;
+    content: '';
+    background-color: #dab98d;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: -webkit-transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.post-navigation a:hover:before,
+.author-title a:hover:before,
+.yumecommerce-post-comments a:hover:before,
+.yumecommerce-post-intro a.more-link:hover:before,
+.reply a.comment-reply-link:hover:before {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+    text-align: right;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+.post-navigation .nav-next {
+    text-align: left;
+}
+
+.comments-title {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.comment-navigation {
+    text-align: center;
+
+    a {
+        padding: 0 10px;
+    }
+}
+
+.author-info {
+    float: left;
+    width: 100%;
+    margin: 50px 0 40px;
+    border-top: 1px solid #f1f1f1;
+    padding-top: 50px;
+
+    h4 {
+        margin-top: 0 !important;
+    }
+
+    .author-bio {
+        display: block;
+        width: 100%;
+        float: left;
+    }
+}
+
+.author-avatar {
+    float: left;
+    width: 70px;
+
+    .author-info {
+        margin: 50px 0 80px 30px;
+    }
+
+    .comment-author b {
+        width: 100%;
+        float: left;
+    }
+}
+
+.yumecommerce-post-date {
+    line-height: 1;
+}
+
+.show-avatars {
+    
+    .author-avatar {
+        margin-right: 25px;
+    }
+
+    .author-description {
+        padding-left: 0px;
+
+        @media (min-width: 600px) {
+            padding-left: 110px;
+        }
+    }
+}
+
+.no-sidebar .yumecommerce-sidebar,
+.masonry .yumecommerce-sidebar {
+    display: none;
+}
+
+.masonry {
+    .grid-sizer, .yumecommerce-post-container {
+        width: 100%;
+        float: left;
+        margin-bottom: 40px;
+    }
+
+    .yumecommerce-post-container.sticky {
+        width: 100%;
+    }
+
+    .gutter-sizer { 
+        width: 0;
+    }
+
+    .yumecommerce-post-title span {
+        font-size: .75em;
+    }
+
+    .yumecommerce-post-intro {
+        font-size: .85em;
+    }
+
+    .yumecommerce-post-thumbnail {
+        margin: 0;
+    }
+
+    .yumecommerce-post-title {
+        line-height: 1;
+    }
+
+    .yumecommerce-post-date {
+        font-size: 80%;
+    }
+
+    .yumecommerce-posts-container:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+}
+
+.yumecommerce-sidebar {
+    width: 250px;
+}
+
+.right-sidebar #yumecommerce-page, 
+.left-sidebar #yumecommerce-page,
+.masonry #yumecommerce-page,
+.page-template-template-blog-right-sidebar #yumecommerce-page,
+.page-template-template-blog-left-sidebar #yumecommerce-page {
+    max-width: 1000px;
+}
+
+.right-sidebar .yumecommerce-sidebar,
+.page-template-template-blog-right-sidebar .yumecommerce-sidebar {
+    float: right;
+}
+
+.left-sidebar .yumecommerce-sidebar,
+.page-template-template-blog-left-sidebar .yumecommerce-sidebar {
+    float: left;
+}
+
+.right-sidebar .yumecommerce-post-container,.left-sidebar .yumecommerce-post-container,
+.page-template-template-blog-right-sidebar .yumecommerce-post-container, .page-template-template-blog-left-sidebar .yumecommerce-post-container {
+    width: 100%;
+}
+
+.right-sidebar .yumecommerce-post-container,.right-sidebar .yumecommerce-post-pagination,
+.page-template-template-blog-right-sidebar .yumecommerce-post-container {
+    float: left;
+}
+
+.left-sidebar .yumecommerce-post-container,.left-sidebar .yumecommerce-post-pagination,
+.page-template-template-blog-left-sidebar .yumecommerce-post-container, .page-template-template-blog-left-sidebar .yumecommerce-post-pagination {
+    float: right;
+}
+
+// jetpack Related Posts
+#jp-relatedposts {
+    a.jp-relatedposts-post-a {
+        border-bottom: none;
+    }
+}

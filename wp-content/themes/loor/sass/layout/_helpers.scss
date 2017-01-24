@@ -1,0 +1,151 @@
+/*
+* Additional classes to style rows and cells of PageBuilder
+*/
+
+
+// different width for rows
+.super-small-width {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.very-small-width {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.small-width {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.average-width {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+// set background of the row to the top
+.background-on-top {
+  background-position: center -5px !important;
+}
+
+// set background of the row to the top
+.background-full {
+  background-size: 100%;
+}
+
+// locate content to the chosen position
+.absolute-right {
+  position: absolute;
+  right: 0;
+}
+
+.absolute-left {
+  position: absolute;
+  left: 0;
+}
+
+.absolute-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.absolute-top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -5px;
+}
+
+// separate columns by line
+.linebreaker {
+  .panel-grid-cell:not(:last-child),
+  .recent-post:not(:last-child) {
+    border-right: none;
+
+    @media (min-width: 992px) {
+      border-right: 1px solid #eee;
+    }
+  } 
+}
+
+// classes to hide elements based on viewport
+.hide-on-mobile {
+
+  @media (max-width: 544px) {
+    display: none;
+  }
+
+  display: block;
+}
+
+.hide-on-tablet {
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+
+  display: block;
+}
+
+// make content width smaller
+.smaller-width-on-mobile {
+  max-width: 80%;
+
+  @media (min-width: 544px) {
+    max-width: 100%;
+  }
+}
+
+// remove margin bottom for row's cells
+.margin-bottom-none {
+  margin-bottom: -30px !important;
+}
+
+// remove margin before footer widget area
+.remove-margin-before-footer {
+  margin-bottom: -80px;
+
+  @media (min-width: 768px) {
+    margin-bottom: -140px;
+  }
+}
+
+// make position relative for parent row
+.position-relative {
+    position: relative;
+}
+
+// style form's inputs with border bottom
+.border-bottom-input {
+  input:not([type='checkbox']),
+  input:not([type='radio']),
+  input:not([type='submit']) {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-width: 1.5px !important;
+    font-size: 95%;
+    border-radius: 0;
+  }
+}
+
+.share-buttons-row {
+  a {
+    padding: .9em .2em !important;
+
+    &:hover {
+      opacity: .65;
+    }
+  }
+
+  .social-media-button-container {
+    @media (max-width: 544px) {
+      text-align: center !important;
+    }
+  }
+
+}
+

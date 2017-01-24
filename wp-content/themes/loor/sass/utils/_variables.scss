@@ -1,0 +1,19 @@
+// Some common variables and mixins to get started.
+
+$base-font: 		"Helvetica Neue", sans-serif;
+$header-font: 		$base-font;
+
+// base color scheme
+$body-background: 	#ffffff;
+$color_body: 		#60646c;
+$color_links: 		#96588a;
+$color_border:		rgba(0,0,0,0.1);
+$error: 			#e2401c;
+$success: 			#0f834d;
+$info: 				#3D9CD2;
+
+// layout sizes
+$vspacing: 			1.618em;
+$desktop:			768px;
+$handheld:			568px;
+$container-width:	65.141em;

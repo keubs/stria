@@ -1,0 +1,63 @@
+#customize-control-loor_main_font_size,
+#customize-control-loor_main_typography_styles,
+#customize-control-loor_main_typography_weight,
+.font-main-gf-values,
+.font-headings-gf-values,
+#customize-control-loor_typography_heading_styles,
+#customize-control-loor_typography_navigation_styles,
+.font-navigation-gf-values {
+	width: 45%;
+	padding-right: 5%;
+	float: left;
+}
+
+[id*="customize-control-loor"] select {
+	width: 100%;
+	margin: 0;
+}
+
+#customize-control-loor_main_letter_spacing,
+#customize-control-loor_main_line_height,
+#customize-control-loor_main_typography_subsets,
+.font-main-gf-subsets,
+.font-headings-gf-subsets,
+#customize-control-loor_typography_heading_subsets,
+#customize-control-loor_typography_navigation_subsets,
+.font-navigation-gf-subsets {
+	width: 45%;
+	padding-left: 5%;
+	clear: right;
+	float: left;
+}
+
+#customize-control-loor_typography_headings_h1_font_size,
+#customize-control-loor_typography_headings_h1_weight,
+#customize-control-loor_typography_headings_h1_line_height,
+#customize-control-loor_typography_headings_h2_font_size,
+#customize-control-loor_typography_headings_h2_weight,
+#customize-control-loor_typography_headings_h2_line_height,
+#customize-control-loor_typography_headings_h3_font_size,
+#customize-control-loor_typography_headings_h3_weight,
+#customize-control-loor_typography_headings_h3_line_height,
+#customize-control-loor_typography_headings_h4_font_size,
+#customize-control-loor_typography_headings_h4_weight,
+#customize-control-loor_typography_headings_h4_line_height,
+#customize-control-loor_typography_headings_h5_font_size,
+#customize-control-loor_typography_headings_h5_weight,
+#customize-control-loor_typography_headings_h5_line_height,
+#customize-control-loor_typography_headings_h6_font_size,
+#customize-control-loor_typography_headings_h6_weight,
+#customize-control-loor_typography_headings_h6_line_height {
+	width: 30%;
+	padding-right: 3%;
+	float: left;
+	clear: right;
+}
+
+#customize-control-loor_typography_headings_h2_font_size,
+#customize-control-loor_typography_headings_h3_font_size,
+#customize-control-loor_typography_headings_h4_font_size,
+#customize-control-loor_typography_headings_h5_font_size,
+#customize-control-loor_typography_headings_h6_font_size {
+	clear: left;
+}

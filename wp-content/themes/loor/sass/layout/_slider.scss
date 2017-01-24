@@ -1,0 +1,163 @@
+
+
+#slider-parallax {
+	> div {
+		overflow: hidden;
+	}
+
+	//h1 {
+	//	line-height: 1!important;
+	//}
+
+	.ow-button-hover {
+		font-weight: 700;
+		font-size: .9em
+	}
+
+	p {
+		margin-top: 0px !important;
+	}
+
+	> :not(.siteorigin-panels-stretch) {
+		@media (max-width: 48em) {
+			padding: 0 !important;
+		}
+	}
+
+	.sow-slider-image-wrapper {
+		> div {
+			transform: translateY(-55%);
+			top: 50%;
+			position: relative;
+		}
+
+		img {
+			max-height: calc(100vh - 200px);
+			width: auto !important;
+		}
+	}
+
+	.sow-slider-base .sow-slider-pagination {
+		text-align: center !important;
+		bottom: 25px !important;
+
+		li {
+			text-align: center !important;
+			margin: 0 5px !important;
+		}
+	}
+}
+
+#testimonials {
+	p {
+		text-shadow: none!important;
+	}
+
+	.sow-slider-pagination {
+		display: block !important;
+		text-align: center;
+		bottom: 10px;
+		padding: 0 !important;
+
+		li {
+			margin: 0 5px;
+
+			a {
+				width: 6px;
+				height: 6px;
+			}
+		}
+	}
+
+	.sow-slider-base {
+		padding-bottom: 50px;
+	}
+}
+
+#slider-bottom {
+	margin-top: -65px;
+	line-height: 65px;
+	z-index: 999;
+	font-size: 90%!important;
+	vertical-align: middle;
+	height: 65px;
+	position: relative;
+	display: none;
+
+	p {
+		margin: 0;
+		font-size: .85em;
+	}
+
+	.social-media-button-container a {
+		border: 0 !important;
+		text-shadow: none !important;
+		padding: 0 !important;
+		font-size: 1.3em !important;
+		background-color: transparent !important;
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+	@media (min-width: 48em) {
+		display: block;
+	}
+}
+
+#slider-bottom-watch {
+	position: relative;
+	transform: translateY(-50%);
+	margin-top: -66px;
+	height: 66px;
+	z-index: 99;
+	font-size: 80%!important;
+
+	@media (min-width: 992px) {
+		transform: translateY(-100%);
+	}
+}
+
+.home.slider-full-width .widget_sow-layout-slider {
+
+	width: calc(100% + 30px);
+	left: -15px;
+	position: relative;
+
+	@media (min-width: 48em) {
+		width: calc(100% + 100px);
+		left: -50px;
+	}
+}
+
+/* make vertical align for slider content with this id */
+#slider-vertical-center {
+
+	.sow-slider-image-wrapper {
+		> div {
+			transform: translateY(-55%);
+			top: 50%;
+			position: relative;
+		}
+	}
+	
+}
+
+// make responsive iframe for video
+
+.sow-slider-image {
+	> iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+
+		@media (min-aspect-ratio: 16/9) {
+			height: 300%;
+			top: -100%;
+		}
+	}
+}

@@ -1,0 +1,131 @@
+::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7a8b9d;
+}
+
+.wp-full-overlay-sidebar {
+    background: #ddd;
+    background-image: linear-gradient(#8b9da9, #fff6e4);
+    min-height: 100%;
+    color: #44494a;
+    border: none;
+}
+
+#customize-theme-controls .accordion-section-title {
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    background: transparent;
+    transition: .2s cubic-bezier(.55, .05, .65, .95) all;
+    color: #494a4e;
+}
+
+#customize-controls .control-section:hover>.accordion-section-title,
+#customize-controls .control-section:focus>.accordion-section-title {
+    background: rgba(255,255,255,.5);
+}
+
+#customize-theme-controls .accordion-section-title:after {
+    color: rgba(255, 255, 255, .9);
+    transition: .2s cubic-bezier(.55, .05, .65, .95) all;
+}
+
+#customize-theme-controls .control-section .accordion-section-title:focus:after, #customize-theme-controls .control-section .accordion-section-title:hover:after, #customize-theme-controls .control-section.open .accordion-section-title:after, #customize-theme-controls .control-section:hover>.accordion-section-title:after {
+    color: #7a8b9d;
+}
+
+#customize-controls .customize-info .accordion-section-title {
+    background: transparent;
+    opacity: .5;
+    color: #fff;
+}
+
+.customize-section-title h3, h3.customize-section-title {
+    color: #fff;
+}
+
+#customize-controls .customize-info {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    border-top: none;
+    background: rgba(255,255,255,0.1);
+}
+
+.customize-section-title {
+    background: rgba(255,255,255,0.1);
+}
+
+#customize-header-actions {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.customize-panel-back, .customize-panel-back, .customize-section-back, .customize-section-back {
+    background: rgba(255, 255, 255, .4);
+    color: #fff;
+    border: none;
+    transition: .2s cubic-bezier(.55, .05, .65, .95) all;
+}
+
+.customize-panel-back:focus, .customize-panel-back:hover, .customize-section-back:focus, .customize-section-back:hover {
+    color: #7a8b9d;
+    background: rgba(255, 255, 255, .6);
+}
+
+.customize-control input[type=tel], .customize-control input[type=url], .customize-control input[type=text], .customize-control input[type=password], .customize-control input[type=email], .customize-control input[type=number], .customize-control input[type=search] {
+    border: 0;
+    border-radius: 5px;
+    box-shadow: none;
+    color: #788183;
+    padding: 8px 10px
+}
+
+.customize-controls-close {
+    border-color: rgba(255, 255, 255, .2);
+    color: #fff;
+    background: transparent;
+}
+
+.customize-controls-close:focus, .customize-controls-close:hover {
+    background: rgba(255, 255, 255, .6);
+    color: #444;
+}
+
+.wp-color-result {
+    border: none;
+}
+
+.wp-picker-container input[type=text].wp-color-picker {
+    width: 75px;
+    padding: 4px 5px;
+    line-height: 15px;
+}
+
+.wp-picker-container .iris-picker {
+    border: none;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 5px;
+}
+
+.customize-control-radio-image img {
+    width: 80px;
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    transition: .15s ease-in all;
+    border-radius: 5px;
+}
+
+.customize-control-radio-image .ui-state-hover img,
+.customize-control-radio-image .ui-state-active img {
+    box-shadow: 0 0 0 2px #7a8b9d;
+}
+
+.customize-control-radio-image .ui-button {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    float: left;
+    height: auto;
+    width: auto;
+    padding: 0;
+}

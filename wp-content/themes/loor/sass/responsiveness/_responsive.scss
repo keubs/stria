@@ -1,0 +1,527 @@
+/*
+* Responsive Style
+*/
+
+.sm-visible {
+    display: block;
+}
+
+.ld-visible {
+    display: none;
+}
+
+@keyframes slideright {
+    0%,20% {
+        transform: translateX(-50px);
+    }
+
+    60% {
+        transform: translateX(0);
+    }
+}
+
+header.bodyBoxed .header-bottom,.single-product header.bodyBoxed .header-bottom {
+    display: none;
+}
+
+/*  Small devices (landscape phones, 34em - 544px and up)  */
+@media (min-width: 34em) {
+    .ld-visible {
+        display: none;
+    }
+
+    /* Single product */
+    .woocommerce p.stars {
+        zoom: .9;
+    }
+
+    .single-product .upsells h2,.single-product .related h2 {
+        margin-bottom: 20px;
+    }
+
+    /* Cart */
+    .woocommerce table.cart .product-thumbnail {
+        display: table-cell;
+        width: 35%;
+    }
+
+    .woocommerce table.shop_table td.product-price {
+        display: table-cell;
+    }
+
+    .woocommerce table.shop_table td.product-subtotal {
+        width: 110px;
+    }
+
+    .woocommerce table.shop_table td.product-thumbnail {
+        padding: 12px 20px 12px 0;
+    }
+}
+
+/*  Medium devices (tablets, 48em - 768px and up)  */
+@media (min-width: 48em) {
+    /* Section */
+    
+    body.wide .bodyBoxed {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+        
+    /* Slider */
+    #yumecommerce-main-slider .swiper-button-prev {
+        left: 40px;
+        width: 50px;
+        background-position: left;
+    }
+
+    #yumecommerce-main-slider .swiper-button-next {
+        right: 40px;
+        width: 50px;
+        background-position: right;
+    }
+
+    #yumecommerce-main-slider-footer:before,#yumecommerce-main-slider-footer:after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 65px;
+    }
+
+    #yumecommerce-main-slider-footer:before {
+        left: -50px;
+    }
+
+    #yumecommerce-main-slider-footer:after {
+        right: -50px;
+    }
+    
+    #yumecommerce-main-slider .swiper-slide {
+        padding: 0 50px;
+    }
+    
+    body.boxed #yumecommerce-custom-footer-widgets {
+        padding: 0 40px;
+    }
+    
+    body.boxed #yumecommerce-custom-footer-widgets, body.boxed footer.footer {
+        width: calc(100% + 70px);
+        left: -35px;
+    }
+    
+    body.boxed footer.footer
+    {
+        padding: 40px;
+    }
+
+    body.wide footer.footer, body.wide #yumecommerce-custom-footer-widgets, body.wide #yumecommerce-custom-widgets {
+        width: calc(100% + 100px);
+        left: -50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        position: relative;
+    }
+
+    body.single-product #yumecommerce-custom-footer-widgets {
+        margin-top: 100px;
+    }
+
+    .yumecommerce-section-footer {
+        padding: 35px 0 30px;
+    }
+    
+    .yumecommerce-section-footer .panel-grid {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .woocommerce div.product div.images,.woocommerce #content div.product div.images {
+        width: calc(100% + 100px);
+        left: -50px;
+    }
+
+    #yumecommerce-main-slider {
+        width: calc(100% + 100px);
+        left: -50px;
+    }
+
+    #yumecommerce-main-slider h2 {
+        font-size: 70px;
+    }
+
+    #yumecommerce-main-slider p {
+        font-size: 105%;
+    }
+
+    /* Blog style */
+    .masonry .grid-sizer, 
+    .masonry .yumecommerce-post-container {
+        width: 48%;
+        float: left;
+        margin-bottom: 40px;
+    }
+    
+    .masonry .yumecommerce-post-container.sticky {
+        width: 100%;
+    }
+    
+    .masonry .gutter-sizer { 
+        width: 2%;
+    }
+    .main-title {
+        margin-bottom: 80px;
+        margin-top: 80px;
+        padding: 0 0 20px;
+    }
+
+    .single-post .main-title {
+        margin-bottom: 20px;
+    }
+
+    .single-post .yumecommerce-post-date {
+        margin-bottom: 50px;
+        font-size: 100%;
+    }
+
+    .single-post .yumecommerce-post-meta {
+        margin: 50px 0;
+    }
+
+    .yumecommerce-post-thumbnail {
+        margin: 0 -25px 23px;
+    }
+
+    .yumecommerce-post-thumbnail figcaption {
+        padding: 5px 0 0;
+    }
+
+    #yumecommerce-comments {
+        margin-top: 50px;
+    }
+
+    .comments-title {
+        font-size: 27px;
+    }
+
+    /* store */
+
+    /* Woocommerce Checkout */
+    body.woocommerce-checkout .woocommerce .checkout_coupon .form-row-last {
+        float: left;
+    }
+
+    body.woocommerce-checkout .woocommerce .checkout_coupon p {
+        max-width: 210px;
+        margin-right: 10px;
+    }
+
+    body.woocommerce-checkout .woocommerce .checkout_coupon .form-row-first {
+        max-width: 180px;
+    }
+}
+
+/*  Large devices (desktops, 62em - 992px and up)  */
+@media (min-width: 62em) {
+    .sm-visible {
+        display: none;
+    }
+
+    .ld-visible {
+        display: block;
+    }
+    
+    .logo a {
+        float: left;
+        height: 55px;
+    }
+    
+    h4.site-title {
+        font-size: 1.4em;
+        line-height: 55px;
+    }
+
+    body.boxed .bodyBoxed {
+        padding: 0 35px;
+    }
+    
+    body.wide #yumecommerce-main-recent-posts {
+        display: block;
+        margin: 100px auto 0px;
+    }
+
+    .right-sidebar .yumecommerce-post-container,.left-sidebar .yumecommerce-post-container,.left-sidebar .yumecommerce-post-pagination,.right-sidebar .yumecommerce-post-pagination, 
+    .page-template-template-blog-right-sidebar .yumecommerce-post-container, .page-template-template-blog-right-sidebar .yumecommerce-post-pagination,
+    .page-template-template-blog-left-sidebar .yumecommerce-post-container, .page-template-template-blog-left-sidebar .yumecommerce-post-pagination {
+        width: calc(100% - 340px);
+    }
+
+    /* main screen style */
+    header.bodyBoxed .logo {
+        text-align: left;
+    }
+
+    header.bodyBoxed .header-bottom,.single-product header.bodyBoxed .header-bottom {
+        display: block;
+        visibility: visible;
+    }
+
+    header.bodyBoxed,header.bodyBoxed .header {
+        height: 65px;
+    }
+
+    #close-icon,#nav-icon {
+        height: 64px;
+    }
+
+    header.bodyBoxed .logo {
+        height: 55px;
+    }
+
+    .yumecommerceCart a {
+        height: 65px;
+    }
+
+    .yumecommerceCart span#cart-icon {
+        height: 65px;
+    }
+
+    header.bodyBoxed span.count:after {
+        top: 30px;
+    }
+
+    .boxed .yumecommerce-post-thumbnail {
+        margin: 0;
+    }
+
+    .yumecommerce-summary {
+        width: 48%;
+    }
+
+    .single-product.woocommerce .woocommerce-message,.single-product.woocommerce .woocommerce-error {
+        margin-top: -16px !important;
+        font-size: .9em;
+    }
+
+    .woocommerce .woocommerce-error:before,.woocommerce .woocommerce-info:before,.woocommerce .woocommerce-message:before {
+        left: 20px;
+    }
+
+    .woocommerce div.product div.images,.woocommerce #content div.product div.images {
+        margin-bottom: 0;
+        width: 48.5%;
+        left: 0;
+        top: -30px;
+    }
+
+    .woocommerce div.product p.price {
+        margin: 0 0 30px;
+        font-size: 120%;
+    }
+
+    /* animation */
+    .images {
+        transform: translate3d(-40px,0,0);
+    }
+
+    .animate.animatedone .images {
+        opacity: 0;
+        transform: translate3d(-40px,0,0);
+    }
+
+    .entry-summary {
+        transition-delay: 20ms;
+    }
+
+    .woocommerce-tabs {
+        transition-delay: 120ms;
+    }
+
+    .gallery-top {
+        padding-bottom: 40px;
+    }
+
+    .gallery-top .swiper-wrapper {
+        padding-bottom: 5px;
+    }
+    
+    /* blog */
+    body:not(.masonry) .yumecommerce-post-container {
+        margin-bottom: 60px;
+        padding-bottom: 65px;
+    }  
+
+    .masonry .grid-sizer, 
+    .masonry .yumecommerce-post-container {
+        width: 31%;
+        float: left;
+        margin-bottom: 35px;
+    }
+    
+    .masonry .yumecommerce-post-container.sticky {
+        width: 66%;
+    }
+    
+    .masonry .gutter-sizer { 
+        width: 3.5%;
+    }
+
+    /*  single product page  */
+    .woocommerce div.product div.summary h1 {
+        margin-top: 5px;
+    }
+
+    .woocommerce div.product form.cart .variations select {
+        font-size: 90%;
+    }
+
+    .woocommerce div.product div.summary .product_meta,.woocommerce div.product .woocommerce-product-rating,.woocommerce div.product .store-navigation-links {
+        display: block;
+    }
+
+    .woocommerce .comment-text .star-rating {
+        top: 7px;
+    }
+
+    .woocommerce div.product div.summary {
+        padding-top: 0;
+        text-align: left;
+    }
+
+    .woocommerce div.product div[itemprop="offers"] {
+        float: left;
+        margin-top: 0;
+        text-align: left;
+        width: auto;
+    }
+
+    .woocommerce div.product p.price {
+        margin: 23px 0 33px;
+        font-size: 140%;
+    }
+
+    .woocommerce div.product form.cart .variations td.value {
+        position: relative;
+        width: calc(100% - 70px);
+        max-width: 250px;
+    }
+
+    .woocommerce div.product form.cart .button {
+        min-width: 210px;
+        width: auto;
+    }
+
+    .woocommerce a.added_to_cart {
+        max-width: 145px;
+        margin-left: 10px;
+        margin-top: 0;
+    }
+
+    .woocommerce span.onsale {
+        font-size: 70%;
+        margin-top: -30px;
+    }
+
+    .woocommerce-tabs {
+        line-height: 1.75em;
+    }
+
+    .single-product .upsells,.single-product .related {
+        margin-top: 40px;
+    }
+    
+    .footer-social-icons a {
+        margin: -5px 10px 5px 0;
+        position: relative;
+    }
+
+    .yumecommerce-section-footer .row,
+    .custom-section .row {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+
+    .admin-bar #yumecommerce-main-slider {
+        margin-top: -97px;
+    }
+
+    #yumecommerce-main-slider {
+        margin-top: -65px;
+    }
+    
+    ul.recent-posts-container {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+
+    /* Cart */
+    .woocommerce-cart .woocommerce > form {
+        width: 60%;
+    }
+
+    .woocommerce .cart-collaterals, .woocommerce-page .cart-collaterals {
+        width: 33%;
+        background: #f9f9f9;
+        padding: 10px 30px 20px;
+    }
+    
+    .woocommerce .cart-collaterals {
+        margin-top: 0;
+    }
+
+    .woocommerce-page .cart-collaterals .cart_totals h2 {
+        margin-top: 20px;
+        margin-bottom: 8px;
+        line-height: 1.2;
+    }
+
+    .woocommerce-cart table.cart td.actions .coupon input#coupon_code,
+    .woocommerce-cart table.cart td.actions .coupon input[name="apply_coupon"] {
+        width: auto;
+        float: left;
+        margin-bottom: 15px;
+        margin-right: 15px;
+    }
+
+    /* checkout */
+    .woocommerce-page .col2-set .col-2,
+    .woocommerce .col2-set .col-1,
+    .woocommerce-page .col2-set .col-1 {
+        width: 100%;
+    }
+
+    .woocommerce .col2-set,.woocommerce-page .col2-set {
+        width: 51%;
+        float: left;
+    }
+
+    #order_review_heading,#order_review {
+        float: right;
+        width: 42%;
+    }
+
+    /* slider */
+    body.boxed #yumecommerce-main-slider {
+        width: calc(100% + 70px);
+        left: -35px;
+    }
+
+    /* main page */
+    .yumecommerce-main-page-heading {
+        padding: 0 0 5px;
+    }
+
+    .yumecommerce-main-page-text {
+        margin: 0 0 30px;
+    }
+}
+
+/*  Extra large devices (large desktops, 75em - 1200px and up)  */
+@media (min-width: 75em) {
+    #yumecommerce-main-slider {
+        width: 100%;
+        left: 0;
+    }
+
+    .woocommerce a.added_to_cart {
+        max-width: 210px;
+    }
+}
