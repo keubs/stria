@@ -1,0 +1,37 @@
+.yc-button-base {
+  zoom: 1;
+  /* All the special styles */
+}
+.yc-button-base:before {
+  content: '';
+  display: block;
+}
+.yc-button-base:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.yc-button-base a {
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1em;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.yc-button-base a .sow-icon-image,
+.yc-button-base a [class^="sow-icon-"] {
+  font-size: 1.3em;
+  height: 1em;
+  width: auto;
+  margin: -0.1em 0.75em -0.2em -0.75em;
+  display: block;
+  float: left;
+}
+.yc-button-base a .sow-icon-image {
+  width: 1em;
+  background-size: cover;
+}
