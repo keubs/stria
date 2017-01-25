@@ -1,0 +1,95 @@
+@import "../../../../../plugins/so-widgets-bundle/base/less/mixins";
+
+
+@align: center;
+@font_size: 1em;
+@letter_spacing: normal;
+@weight: normal;
+@border_radius: 5px;
+@border_width: 1px;
+@max_width: auto;
+@margin: 0px;
+@padding: 1em 2em;
+@has_text: true;
+
+@button_background: transparent;
+@border_color: transparent;
+@text_color: #FFFFFF;
+
+@button_hover_background: transparent;
+@border_hover_color: transparent;
+@text_hover_color: #FFFFFF;
+
+/* Tablet */
+	@t_layout: false;
+	@t_align: center;
+	@t_font_size: 1em;
+	@t_max_width: 100%;
+	@t_padding: 1em 2em;
+	@t_margin: 0px;
+
+/* Mobile */
+	@m_layout: false;
+	@m_align: center;
+	@m_font_size: 1em;
+	@m_max_width: 100%;
+	@m_padding: 1em 2em;
+	@m_margin: 0px;
+
+
+.yc-button-base {
+	.clearfix();
+
+	text-align: @align;
+
+	a {
+		font-size: @font_size;
+		letter-spacing: @letter_spacing;
+		font-weight: @weight;
+		padding: @padding;
+		background: @button_background;
+		width: @max_width;
+		color: @text_color !important;
+		border: @border_width solid @border_color;
+		border-radius: @border_radius;
+		margin: @margin;
+
+		&:active,
+		&:hover{
+			outline: none;
+			color: @text_hover_color !important;
+			background: @button_hover_background;
+			border-color: @border_hover_color;
+		}
+	}
+
+	.tablelayoutstyles() when (@t_layout = true) {
+	    @media (max-width: 768px) {
+	        text-align: @t_align;
+	    }
+	    a {
+	    	@media (max-width: 768px) {
+	        	font-size: @t_font_size;
+				max-width: @t_max_width;
+				padding: @t_padding;
+				margin: @t_margin;
+	    	}
+	    }
+	}
+	.tablelayoutstyles();
+
+	.mobilelayoutstyles() when (@m_layout = true) {
+	    @media (max-width: 480px) {
+	        text-align: @m_align;
+	    }
+	    a {
+	    	@media (max-width: 480px) {
+	        	font-size: @m_font_size;
+				max-width: @m_max_width;
+				padding: @m_padding;
+				margin: @m_margin;
+	    	}
+	    }
+	}
+	.mobilelayoutstyles();
+}

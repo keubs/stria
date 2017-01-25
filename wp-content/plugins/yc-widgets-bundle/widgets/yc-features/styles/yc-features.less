@@ -1,0 +1,258 @@
+@import "../../../../so-widgets-bundle/base/less/mixins";
+
+.widget-function('import_google_font');
+
+@title_font: default;
+@title_font_weight: 400;
+@title_font_weight_number: 400;
+@title_font_style: normal;
+@title_size: default;
+@title_color: default;
+
+@text_font: default;
+@text_font_weight: 400;
+@text_font_weight_number: 400;
+@text_font_style: normal;
+@text_size: default;
+@text_color: default;
+
+@more_text_font: default;
+@more_text_font_weight: 400;
+@more_text_font_weight_number: 400;
+@more_text_font_style: normal;
+@more_text_size: default;
+@more_text_color: default;
+
+/* layout */
+  @t_align: left;
+  @container_size: 60px;
+  @per_row: 3;
+  @title_margin: 1em 0;
+  @title_padding: 0px;
+  @text_margin: 1em 0;
+  @text_padding: 0px 0px 20px;
+  @gutter: 25px;
+
+/* responsive */
+  @t_layout: false;
+  @m_layout: false;
+  @t_per_row: 3;
+  @m_per_row: 1;
+  @table_align: left;
+  @m_align: left;
+
+    /* tablet */
+    @table_title_margin: default;
+    @table_title_padding: default;
+    @table_text_margin: default;
+    @table_text_padding: default;
+    @t_title_size: default;
+    @t_text_size: default;
+    @t_more_size: default;
+
+    /* mobile */
+    @m_title_margin: default;
+    @m_title_padding: default;
+    @m_text_margin: default;
+    @m_text_padding: default;
+    @m_title_size: default;
+    @m_text_size: default;
+    @m_more_size: default;
+
+
+.yc-features-desktop {
+  display: block;
+}
+
+.yc-features-tablet,
+.yc-features-mobile {
+  display: none;
+}
+.yc-features-list {
+  .yc-features-feature {
+    .yc-feature-title {
+      .font(@title_font, @title_font_weight);
+      font-weight: @title_font_weight_number;
+      font-style: @title_font_style;
+      font-size: @title_size;
+      color: @title_color;
+    }
+
+    p.yc-text-text {
+      .font(@text_font, @text_font_weight);
+      font-weight: @text_font_weight_number;
+      font-style: @text_font_style;
+      font-size: @text_size;
+      color: @text_color;
+    }
+
+    p.yc-more-text a {
+      .font(@more_text_font, @more_text_font_weight);
+      font-weight: @more_text_font_weight_number;
+      font-style: @more_text_font_style;
+      font-size: @more_text_size;
+      color: @more_text_color;
+    }
+  }
+
+  .yc-icon {
+    font-size: @container_size;
+    width: @container_size;
+    height: @container_size;
+  }
+
+  .yc-features-feature {
+    padding: 0 @gutter;
+  }
+}
+
+/* desktop */
+
+.yc-features-desktop {
+    &.yc-features-icon-next-to-title {
+      .yc-feature-title {
+        width: calc(~"100% - "@container_size);
+      }
+    }
+
+    &.yc-features-icon-next-to-feature {
+      .textwidget {
+        width: calc(~"100% - "@container_size);
+      }
+      .yc-icon-container {
+        width: @container_size;
+      }
+    }
+
+    .yc-feature-title {
+      margin: @title_margin;
+      padding: @title_padding;
+    }
+
+    .textwidget {
+      text-align: @t_align;
+      margin: @text_margin;
+      padding: @text_padding;
+    }
+
+    .yc-features-feature {
+      width: 100% / @per_row;
+    }
+}
+
+/* tablet */
+
+.yc-features-tablet {
+    &.yc-features-icon-next-to-title {
+      .yc-feature-title {
+        width: calc(~"100% - "@container_size);
+      }
+    }
+
+    &.yc-features-icon-next-to-feature {
+      .textwidget {
+        width: calc(~"100% - "@container_size);
+      }
+      .yc-icon-container {
+        width: @container_size;
+      }
+    }
+
+    .yc-feature-title {
+      margin: @table_title_margin;
+      padding: @table_title_padding;
+    }
+
+    .textwidget {
+      text-align: @table_align;
+      margin: @table_text_margin;
+      padding: @table_text_padding;
+    }
+
+    .yc-features-feature {
+      width: 100% / @t_per_row;
+
+      .yc-feature-title {
+        font-size: @t_title_size;
+      }
+
+      p.yc-text-text {
+        font-size: @t_text_size;
+      }
+
+      p.yc-more-text {
+        font-size: @t_more_size;
+      }
+    }
+}
+
+/* mobile */
+
+.yc-features-mobile {
+    &.yc-features-icon-next-to-title {
+      .yc-feature-title {
+        width: calc(~"100% - "@container_size);
+      }
+    }
+
+    &.yc-features-icon-next-to-feature {
+      .textwidget {
+        width: calc(~"100% - "@container_size);
+      }
+      .yc-icon-container {
+        width: @container_size;
+      }
+    }
+    
+    .yc-feature-title {
+      margin: @m_title_margin;
+      padding: @m_title_padding;
+    }
+    
+    .textwidget {
+      text-align: @m_align;
+      margin: @m_text_margin;
+      padding: @m_text_padding;
+    }
+
+    .yc-features-feature {
+      width: 100% / @m_per_row;
+
+      .yc-feature-title {
+        font-size: @m_title_size;
+      }
+
+      p.yc-text-text {
+        font-size: @m_text_size;
+      }
+
+      p.yc-more-text {
+        font-size: @m_more_size;
+      }
+    }
+}
+
+.tstyles() when (@t_layout = true) {
+  @media (max-width: 768px) {
+    .yc-features-desktop {
+      display: none;
+    }
+    .yc-features-tablet {
+      display: block;
+    }
+  }
+}
+.tstyles();
+
+.mstyles() when (@m_layout = true) {
+  @media (max-width: 480px) {
+    .yc-features-desktop,
+    .yc-features-tablet {
+      display: none;
+    }
+    .yc-features-mobile {
+      display: block;
+    }
+  }
+}
+.mstyles();
