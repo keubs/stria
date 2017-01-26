@@ -1810,7 +1810,8 @@ select[multiple].input-lg {
   .hidden-print {
     display: none !important; } }
 body {
-  font-family: 'NeutraTextPS-Book'; }
+  font-family: 'NeutraTextPS-Book';
+  color: #231F20; }
 
 /*=====  End of Override Styles  ======*/
 /*=======================================
@@ -1822,7 +1823,7 @@ body {
   width: 10%; }
 
 nav.nav {
-  margin: -2em 0 2em 0; }
+  margin: -2em 0 4em 0; }
   nav.nav ul {
     padding: 0 1em;
     margin: 0;
@@ -1837,6 +1838,8 @@ nav.nav {
     nav.nav li:nth-child(5), nav.nav li:nth-child(6), nav.nav li:nth-child(7), nav.nav li:nth-child(8) {
       float: right;
       margin: 0 0 0 1em; }
+  nav.nav a {
+    color: #231F20; }
 
 /*=====  End of Override Styles  ======*/
 /*=======================================

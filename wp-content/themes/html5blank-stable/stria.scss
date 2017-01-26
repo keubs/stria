@@ -2,9 +2,10 @@
 =            Override Styles            =
 =======================================*/
 @import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap-custom';
-
+@import 'vars';
 body {
 	font-family: 'NeutraTextPS-Book';
+	color: $dark;
 }
 
 
@@ -22,7 +23,7 @@ body {
 }
 
 nav.nav {
-	margin: -2em 0 2em 0;
+	margin: -2em 0 4em 0;
 	ul {
 		padding: 0 1em;
 		margin: 0;
@@ -52,7 +53,10 @@ nav.nav {
 			margin: 0 0 0 1em;
 		}
 
+	}
 
+	a {
+		color: $dark;
 	}
 }
 
