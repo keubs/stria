@@ -1,0 +1,45 @@
+/*=======================================
+=            Override Styles            =
+=======================================*/
+body {
+  font-family: 'NeutraTextPS-Book'; }
+
+/*=====  End of Override Styles  ======*/
+/*=======================================
+=            Override Styles            =
+=======================================*/
+.logo {
+  margin: 1em auto;
+  display: block;
+  width: 10%; }
+
+nav.nav {
+  margin: -2em 0 4em 0; }
+  nav.nav ul {
+    padding: 0 1em;
+    margin: 0;
+    width: 100%; }
+  nav.nav li {
+    list-style: none;
+    display: inline-block;
+    text-transform: uppercase; }
+    nav.nav li:nth-child(1), nav.nav li:nth-child(2), nav.nav li:nth-child(3), nav.nav li:nth-child(4) {
+      float: left;
+      margin: -1em 1em 0 0; }
+    nav.nav li:nth-child(5), nav.nav li:nth-child(6), nav.nav li:nth-child(7), nav.nav li:nth-child(8) {
+      float: right;
+      margin: -1em 0 0 1em; }
+
+/*=====  End of Override Styles  ======*/
+/*=======================================
+=            Homepage styles            =
+=======================================*/
+body.home .wrapper {
+  max-width: 100%;
+  width: 100%; }
+body.home main h1 {
+  display: none; }
+
+/*=====  End of Homepage styles  ======*/
+
+/*# sourceMappingURL=stria.css.map */

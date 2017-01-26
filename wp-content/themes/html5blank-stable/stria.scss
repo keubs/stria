@@ -1,0 +1,80 @@
+/*=======================================
+=            Override Styles            =
+=======================================*/
+// @import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap-custom';
+
+body {
+	font-family: 'NeutraTextPS-Book';
+}
+
+
+/*=====  End of Override Styles  ======*/
+
+
+/*=======================================
+=            Override Styles            =
+=======================================*/
+
+ .logo {
+	margin: 1em auto;
+	display: block;
+	width: 10%;
+}
+
+nav.nav {
+	margin: -2em 0 4em 0;
+	ul {
+		padding: 0 1em;
+		margin: 0;
+		width: 100%;
+
+
+	}
+
+	li {
+		list-style: none;
+		display: inline-block;
+		text-transform: uppercase;
+
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4) {
+			float: left;
+			margin: -1em 1em 0 0;
+		}
+
+		&:nth-child(5),
+		&:nth-child(6),
+		&:nth-child(7),
+		&:nth-child(8) {
+			float: right;
+			margin: -1em 0 0 1em;
+		}
+
+
+	}
+}
+
+/*=====  End of Override Styles  ======*/
+
+
+/*=======================================
+=            Homepage styles            =
+=======================================*/
+
+body {
+	&.home {
+		.wrapper {
+			max-width: 100%;
+			width: 100%;
+		}
+
+		main h1 {
+			display: none;
+		}
+	}
+}
+
+
+/*=====  End of Homepage styles  ======*/
