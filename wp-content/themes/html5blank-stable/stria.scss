@@ -93,3 +93,40 @@ body {
 
 
 /*=====  End of Homepage styles  ======*/
+
+
+/*==============================
+=            Footer            =
+==============================*/
+
+footer {
+	#text-4 {
+		text-align: center;
+	}
+
+	#text-3,
+	#wpcw_social-3 {
+		text-align: right;
+	}
+
+
+	#nav_menu-23 {
+		width: 100%;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+
+			li {
+				display: inline-block;
+				width: 25%;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+/*=====  End of Footer  ======*/
+

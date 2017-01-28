@@ -1859,5 +1859,25 @@ body.home #pg-14-0 .panel-grid-cell {
   padding-bottom: 0; }
 
 /*=====  End of Homepage styles  ======*/
+/*==============================
+=            Footer            =
+==============================*/
+footer #text-4 {
+  text-align: center; }
+footer #text-3,
+footer #wpcw_social-3 {
+  text-align: right; }
+footer #nav_menu-23 {
+  width: 100%; }
+  footer #nav_menu-23 ul {
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+    footer #nav_menu-23 ul li {
+      display: inline-block;
+      width: 25%;
+      text-align: center; }
+
+/*=====  End of Footer  ======*/
 
 /*# sourceMappingURL=stria.css.map */
