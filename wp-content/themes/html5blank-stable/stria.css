@@ -1820,6 +1820,10 @@ body {
 a {
   color: #231F20; }
 
+.wrapper {
+  max-width: 100%;
+  width: 100%; }
+
 .logo {
   margin: 1em auto;
   display: block;
@@ -1848,9 +1852,6 @@ nav.nav {
 /*=======================================
 =            Homepage styles            =
 =======================================*/
-body.home .wrapper {
-  max-width: 100%;
-  width: 100%; }
 body.home main h1 {
   display: none; }
 body.home #pg-14-0 {
