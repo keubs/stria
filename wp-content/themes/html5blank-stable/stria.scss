@@ -19,6 +19,11 @@ a {
 	color: $dark;
 }
 
+.wrapper {
+	max-width: 100%;
+	width: 100%;
+}
+
  .logo {
 	margin: 1em auto;
 	display: block;
@@ -72,10 +77,6 @@ nav.nav {
 
 body {
 	&.home {
-		.wrapper {
-			max-width: 100%;
-			width: 100%;
-		}
 
 		main h1 {
 			display: none;
