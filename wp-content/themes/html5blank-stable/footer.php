@@ -2,9 +2,9 @@
 			<footer class="footer" role="contentinfo">
 				<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
 				<!-- copyright -->
-				<p class="copyright">
+				<!-- <p class="copyright">
 					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>.</a>.
-				</p>
+				</p> -->
 				<!-- /copyright -->
 
 			</footer>
