@@ -1817,6 +1817,9 @@ body {
 /*=======================================
 =            Override Styles            =
 =======================================*/
+a {
+  color: #231F20; }
+
 .logo {
   margin: 1em auto;
   display: block;
@@ -1825,7 +1828,7 @@ body {
 nav.nav {
   margin: -2em 0 4em 0; }
   nav.nav ul {
-    padding: 0 1em;
+    padding: 0;
     margin: 0;
     width: 100%; }
   nav.nav li {
@@ -1857,26 +1860,44 @@ body.home #pg-14-0 .panel-grid-cell {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0; }
+body.home nav.nav {
+  padding: 0 1em; }
 
 /*=====  End of Homepage styles  ======*/
 /*==============================
 =            Footer            =
 ==============================*/
-footer #text-4 {
-  text-align: center; }
-footer #text-3,
-footer #wpcw_social-3 {
-  text-align: right; }
-footer #nav_menu-23 {
-  width: 100%; }
-  footer #nav_menu-23 ul {
-    margin: 0;
-    padding: 0;
-    width: 100%; }
-    footer #nav_menu-23 ul li {
-      display: inline-block;
-      width: 25%;
-      text-align: center; }
+footer {
+  padding: 0 1em; }
+  footer #text-4 {
+    text-align: center; }
+  footer #text-3 a {
+    margin-left: 20px; }
+  footer #wpcw_social-3 {
+    padding-bottom: 1em; }
+    footer #wpcw_social-3 li {
+      margin: 1em 0 0 45px; }
+  footer #text-3,
+  footer #wpcw_social-3 {
+    text-align: right; }
+  footer #nav_menu-23 {
+    width: 100%;
+    border-top: solid 3px #231F20;
+    padding: .5em 0; }
+    footer #nav_menu-23 ul {
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      footer #nav_menu-23 ul li {
+        display: inline-block;
+        width: 16.5%;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1em 0; }
+        footer #nav_menu-23 ul li:first-child {
+          text-align: left; }
+        footer #nav_menu-23 ul li:last-child {
+          text-align: right; }
 
 /*=====  End of Footer  ======*/
 
