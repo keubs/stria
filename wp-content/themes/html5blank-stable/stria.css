@@ -1869,6 +1869,20 @@ body.home nav.nav {
   padding: 0 1em; }
 
 /*=====  End of Homepage styles  ======*/
+/*=======================================
+=            Get Fitted page            =
+=======================================*/
+body.page-id-175 main h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 70px;
+  letter-spacing: 20px;
+  font-weight: bold;
+  margin: .5em 0;
+  background: #000;
+  color: #FFF; }
+
+/*=====  End of Get Fitted page  ======*/
 /*==============================
 =            Footer            =
 ==============================*/
