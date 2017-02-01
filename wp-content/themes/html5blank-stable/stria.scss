@@ -19,15 +19,16 @@ a {
 	color: $dark;
 }
 
-.wrapper {
-	max-width: 100%;
-	width: 100%;
-}
-
  .logo {
 	margin: 1em auto;
 	display: block;
 	width: 10%;
+}
+
+.wrapper {
+	max-width: 95%;
+	width: 95%;
+	margin: 0 auto;
 }
 
 nav.nav {
@@ -77,6 +78,10 @@ nav.nav {
 
 body {
 	&.home {
+		.wrapper {
+			max-width: 100%;
+			width: 100%;
+		}
 
 		main h1 {
 			display: none;
