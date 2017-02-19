@@ -41,10 +41,21 @@
 					<!-- /logo -->
 
 					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
+					<nav class="navbar navbar-default navbar-top">
+					  <div class="container">
+					    <input type="checkbox" id="navbar-toggle-cbox">
+					    <div class="navbar-header">
+					      <label for="navbar-toggle-cbox" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </label>
+					    </div>
+					    <div id="navbar" class="navbar-collapse collapse">
+					      <?php html5blank_nav(); ?>
+					    </div>
+					  </div>
 					</nav>
-					<!-- /nav -->
-
 			</header>
 			<!-- /header -->
