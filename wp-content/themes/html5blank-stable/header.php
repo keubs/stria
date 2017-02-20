@@ -52,7 +52,7 @@
 					        <span class="icon-bar"></span>
 					      </label>
 					    </div>
-					    <div id="navbar" class="navbar-collapse collapse">
+					    <div id="navbar" class="navbar-collapse collapse" style="height: 1px;">
 					      <?php html5blank_nav(); ?>
 					    </div>
 					  </div>

@@ -2333,9 +2333,10 @@ a {
   color: #231F20; }
 
 .logo {
-  margin: 1em auto;
+  margin: 1em auto .5em;
   display: block;
-  width: 10%; }
+  width: 10%;
+  min-width: 54px; }
 
 .wrapper {
   max-width: 95%;
@@ -2403,7 +2404,7 @@ body.home #pg-14-0 .panel-grid-cell {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0; }
-body.home nav.nav {
+body.home nav.navbar {
   padding: 0 1em; }
 
 /*=====  End of Homepage styles  ======*/
@@ -2429,6 +2430,19 @@ body.page-id-175 main h1 {
   text-align: center; }
 
 /*=====  End of Shop page  ======*/
+/*====================================
+=            Product page            =
+====================================*/
+body.product-template-default .woocoomerce_variations_images img {
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  margin: 30px;
+  border: 1px solid #000;
+  padding: 5px 5px 5px 5px !important; }
+
+/*=====  End of Product page  ======*/
 /*==============================
 =            Footer            =
 ==============================*/
