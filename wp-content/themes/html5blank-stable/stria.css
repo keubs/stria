@@ -2333,7 +2333,7 @@ a {
   color: #231F20; }
 
 .logo {
-  margin: 1em auto;
+  margin: 1em auto .5em;
   display: block;
   width: 10%; }
 
