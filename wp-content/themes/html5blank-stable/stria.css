@@ -2448,6 +2448,28 @@ body.product-template-default .woocoomerce_variations_images img {
 ==============================*/
 footer {
   padding: 0 1em; }
+  footer #mailchimpsf_widget-2 {
+    width: 25%;
+    margin-bottom: -80px; }
+    footer #mailchimpsf_widget-2 h3 {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 16.5px; }
+    footer #mailchimpsf_widget-2 #mc_signup_submit {
+      margin-top: 10px; }
+    footer #mailchimpsf_widget-2 label[for=mc_mv_EMAIL] {
+      display: none; }
+    footer #mailchimpsf_widget-2 .mc_merge_var {
+      display: inline-block;
+      width: 63%; }
+    footer #mailchimpsf_widget-2 .mc_signup_submit {
+      display: inline-block;
+      width: 35%; }
+    @media (max-width: 768px) {
+      footer #mailchimpsf_widget-2 {
+        width: 100%;
+        margin: 20px auto;
+        text-align: center; } }
   footer #text-4 {
     text-align: center; }
     @media (max-width: 768px) {

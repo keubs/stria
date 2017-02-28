@@ -201,6 +201,45 @@ body.product-template-default {
 footer {
 	padding: 0 1em;
 	
+
+	#mailchimpsf_widget-2 {
+		width: 25%;
+		margin-bottom: -80px;
+		
+		h3 {
+			margin: 0;
+			text-transform: uppercase;
+			font-size: 16.5px;
+		}
+
+		#mc_signup_submit {
+			margin-top: 10px;
+		}
+
+		#mc_signup {
+		}
+
+		label[for=mc_mv_EMAIL]{
+			display: none;
+		}
+
+		.mc_merge_var {
+			display: inline-block;
+			width: 63%;
+		}
+
+		.mc_signup_submit {
+			display: inline-block;
+			width: 35%;
+		}
+
+		@media (max-width: 768px) {
+			width: 100%;
+			margin: 20px auto;
+			text-align: center;
+		}
+	}
+
 	#text-4 {
 		text-align: center;
 
