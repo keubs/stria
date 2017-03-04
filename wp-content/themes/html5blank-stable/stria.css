@@ -2433,14 +2433,14 @@ body.page-id-175 main h1 {
 /*====================================
 =            Product page            =
 ====================================*/
-body.product-template-default .woocoomerce_variations_images img {
-  border-radius: 50px;
-  width: 100px;
-  height: 100px;
-  padding: 0;
-  margin: 30px;
-  border: 1px solid #000;
-  padding: 5px 5px 5px 5px !important; }
+body.product-template-default .swatch-wrapper {
+  border-radius: 100px;
+  overflow: hidden; }
+  body.product-template-default .swatch-wrapper a {
+    width: 75px !important;
+    height: 75px !important; }
+  body.product-template-default .swatch-wrapper img {
+    width: 100%; }
 
 /*=====  End of Product page  ======*/
 /*==============================
