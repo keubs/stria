@@ -192,6 +192,21 @@ body.product-template-default {
 			border-radius: 100px;
 		}
 	}
+
+	.a3dg-navbar-control {
+		display: none;
+	}
+
+	.a3-dgallery {
+		.a3dg-forward,
+		.a3dg-back {
+			border: none !important;
+		}
+	}
+
+	.a3dg-image-wrapper {
+		border: none !important;
+	}
 }
 
 /*=====  End of Product page  ======*/

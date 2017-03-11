@@ -2442,6 +2442,13 @@ body.product-template-default .swatch-wrapper {
   body.product-template-default .swatch-wrapper img {
     width: 100%;
     border-radius: 100px; }
+body.product-template-default .a3dg-navbar-control {
+  display: none; }
+body.product-template-default .a3-dgallery .a3dg-forward,
+body.product-template-default .a3-dgallery .a3dg-back {
+  border: none !important; }
+body.product-template-default .a3dg-image-wrapper {
+  border: none !important; }
 
 /*=====  End of Product page  ======*/
 /*==============================
