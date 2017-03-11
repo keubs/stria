@@ -2440,7 +2440,8 @@ body.product-template-default .swatch-wrapper {
     width: 75px !important;
     height: 75px !important; }
   body.product-template-default .swatch-wrapper img {
-    width: 100%; }
+    width: 100%;
+    border-radius: 100px; }
 
 /*=====  End of Product page  ======*/
 /*==============================
