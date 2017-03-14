@@ -147,6 +147,10 @@ body {
 			padding: 40px;
 			border-radius: 23px;
 			opacity: .8;
+
+			@media (max-width: 768px) {
+				display: none;
+			}
 		}
 	}
 }

@@ -2417,6 +2417,9 @@ body.home #pg-14-1 {
   padding: 40px;
   border-radius: 23px;
   opacity: .8; }
+  @media (max-width: 768px) {
+    body.home #pg-14-1 {
+      display: none; } }
 
 /*=====  End of Homepage styles  ======*/
 /*=======================================
