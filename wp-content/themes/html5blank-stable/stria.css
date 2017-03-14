@@ -2408,11 +2408,11 @@ body.home nav.navbar {
   padding: 0 1em; }
 body.home #pg-14-1 {
   position: absolute;
-  width: 45%;
+  width: 25%;
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: 10%;
+  top: 60%;
   background: #FFF;
   padding: 40px;
   border-radius: 23px;
