@@ -56,7 +56,7 @@ final class Social extends Base_Widget {
 
 		foreach ( $fields as $key => $field ) {
 
-			if ( ! isset( $field['social'] ) ) {
+			if ( ( ! empty( $field['deprecated'] ) && empty( $field['value'] ) ) || ! isset( $field['social'] ) ) {
 
 				continue;
 
@@ -155,15 +155,15 @@ final class Social extends Base_Widget {
 
 			$escape_callback = $field['escaper'];
 
-			printf(
+			printf( // xss ok.
 				'<li class="%s"><a href="%s" target="%s" title="%s"><span class="fa fa-%s fa-%s"></span>%s</a></li>',
-				$display_labels ? 'has-label' : 'no-label',
+				( $display_labels ) ? 'has-label' : 'no-label',
 				$escape_callback( $field['value'] ),
 				esc_attr( $field['target'] ),
 				sprintf( esc_attr_x( 'Visit %1$s on %2$s', '1. Title of website (e.g. My Cat Blog), 2. Name of social network (e.g. Facebook)', 'contact-widgets' ), get_bloginfo( 'name' ), $field['label'] ),
 				isset( $fields['icon_size']['value'] ) ? esc_attr( $fields['icon_size']['value'] ) : '2x',
 				esc_attr( $field['icon'] ),
-				$display_labels ? esc_html( $field['label'] ) : ''
+				( $display_labels ) ? esc_html( $field['label'] ) : ''
 			);
 
 		}
@@ -179,7 +179,7 @@ final class Social extends Base_Widget {
 	 */
 	public function front_end_enqueue_scripts() {
 
-		wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', [], '4.5.0' );
+		wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', [], '4.7.0' );
 
 		parent::front_end_enqueue_scripts();
 
