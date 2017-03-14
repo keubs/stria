@@ -2406,6 +2406,17 @@ body.home #pg-14-0 .panel-grid-cell {
   padding-bottom: 0; }
 body.home nav.navbar {
   padding: 0 1em; }
+body.home #pg-14-1 {
+  position: absolute;
+  width: 45%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 10%;
+  background: #FFF;
+  padding: 40px;
+  border-radius: 23px;
+  opacity: .8; }
 
 /*=====  End of Homepage styles  ======*/
 /*=======================================
