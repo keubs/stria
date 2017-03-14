@@ -207,6 +207,16 @@ body.product-template-default {
 	.a3dg-image-wrapper {
 		border: none !important;
 	}
+
+	.product_meta {
+		display: none;
+	}
+
+	.woocommerce-variation-add-to-cart {
+		width: 20%;
+		min-width: 170px;
+		margin: 0 auto;
+	}
 }
 
 /*=====  End of Product page  ======*/

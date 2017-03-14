@@ -2449,6 +2449,12 @@ body.product-template-default .a3-dgallery .a3dg-back {
   border: none !important; }
 body.product-template-default .a3dg-image-wrapper {
   border: none !important; }
+body.product-template-default .product_meta {
+  display: none; }
+body.product-template-default .woocommerce-variation-add-to-cart {
+  width: 20%;
+  min-width: 170px;
+  margin: 0 auto; }
 
 /*=====  End of Product page  ======*/
 /*==============================
