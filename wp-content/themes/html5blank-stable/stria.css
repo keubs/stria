@@ -2455,6 +2455,9 @@ body.product-template-default .woocommerce-variation-add-to-cart {
   width: 20%;
   min-width: 170px;
   margin: 0 auto; }
+body.product-template-default .attribute_pa_color_picker_label {
+  font-weight: bold;
+  text-align: left; }
 
 /*=====  End of Product page  ======*/
 /*==============================
