@@ -2474,6 +2474,13 @@ body.product-template-default .attribute_pa_color_picker_label {
   text-align: left; }
 
 /*=====  End of Product page  ======*/
+/*=====================================
+=            Lookbook page            =
+=====================================*/
+body.page-id-180 main h1 {
+  display: none; }
+
+/*=====  End of Lookbook page  ======*/
 /*==============================
 =            Footer            =
 ==============================*/
