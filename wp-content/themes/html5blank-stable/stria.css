@@ -2457,9 +2457,9 @@ body.product-template-default .type-product .images .thumbnails {
   padding: 0 !important; }
   body.product-template-default .type-product .images .thumbnails a {
     width: 100% !important;
-    border-radius: 100px; }
+    border-radius: 200px; }
     body.product-template-default .type-product .images .thumbnails a img {
-      border-radius: 100px; }
+      border-radius: 200px; }
     body.product-template-default .type-product .images .thumbnails a:hover, body.product-template-default .type-product .images .thumbnails a.active {
       border: solid 2px green; }
 body.product-template-default .swatch-wrapper {
