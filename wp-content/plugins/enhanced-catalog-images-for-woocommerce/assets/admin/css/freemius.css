@@ -1,0 +1,302 @@
+/**
+ * FAQs
+ */
+
+#faq {
+    background: #f4f4f4;
+    margin: 40px 20px 0;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+    padding: 30px 30px 15px;
+}
+
+/**
+ * Money Back Guarantee
+ */
+#money_back_guarantee {
+    background: #ffffff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+    border: 1px solid #e5e5e5;
+    margin: 40px 20px;
+}
+
+#money_back_guarantee:before,
+#money_back_guarantee:after {
+    display: none;
+}
+
+    #money_back_guarantee h1 {
+        text-align: left;
+        color: #333;
+        font-size: 20px;
+        margin: 10px 0 20px;
+    }
+
+    #money_back_guarantee h1 .stars {
+        display: none;
+    }
+
+/**
+ * Billing Cycle Buttons
+ */
+
+#billing_cycle {
+    color: #333;
+}
+
+    #billing_cycle span {
+        display: none;
+    }
+
+    #billing_cycle .btn {
+        max-width: none;
+        margin: 0;
+    }
+
+        .tab-slider {
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            text-align: center;
+            overflow: visible;
+        }
+
+            .tab-slider ul {
+                display: inline-block;
+                background: #dcdee1;
+                border: 1px solid #a7a9ab;
+                box-shadow: 0 2px 0 #a7a9ab;
+                border-radius: 4px;
+            }
+
+        #billing_cycle li {
+            width: auto;
+            white-space: nowrap;
+            padding: 14px 18px;
+            float: none;
+            display: inline-block;
+            background: none;
+            margin: 0 0 0 -4px;
+            color: #7c7d7f;
+            text-shadow: 1px 1px 0 rgba(255,255,255,0.4);
+            border-color: #a7a9ab;
+            transition: color 0.25s ease, background-color 0.25s ease;
+        }
+
+        #billing_cycle li:first-child {
+            margin: 0;
+            border-radius: 4px 0 0 4px;
+        }
+
+        #billing_cycle li:last-child {
+            border-radius: 0 4px 4px 0;
+        }
+
+        #billing_cycle li:hover {
+            color: #7c7d7f;
+            background: #e9ebee;
+        }
+
+        #billing_cycle li.selected {
+            color: #333333;
+            background: #fff;
+        }
+
+    #billing_cycle .slider {
+        display: none !important;
+    }
+
+/**
+ * Packages
+ */
+
+.card {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+    border: 1px solid #e5e5e5;
+}
+
+#packages ul>li:first-child article .offer .period {
+    color: #fff !important;
+}
+
+#packages {
+    margin-top: 50px;
+}
+
+    #packages ul>li article.featured {
+        margin-top: 0;
+    }
+
+        #packages ul>li article.featured .ribbon {
+            overflow: hidden;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            height: 100px;
+            width: 100px;
+        }
+
+            #packages ul>li article.featured .ribbon h4 {
+                font-size: 10px;
+                transform: rotate(45deg);
+                padding: 0;
+                position: absolute;
+                top: 22px;
+                right: -22px;
+                width: 135px;
+                height: 30px;
+                line-height: 30px;
+                box-sizing: border-box;
+                text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+            }
+
+            #packages ul>li article.featured .ribbon h4:before,
+            #packages ul>li article.featured .ribbon h4:after {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                position: absolute;
+                content: "";
+                transform: rotate(-45deg);
+            }
+
+            #packages ul>li article.featured .ribbon h4:before {
+                border-width: 0 5px 5px 4px;
+                border-color: transparent transparent #952719 transparent;
+                top: 29px;
+                left: -2px;
+            }
+
+            #packages ul>li article.featured .ribbon h4:after {
+                border-width: 5px 0 4px 5px;
+                border-color: transparent transparent transparent #952719;
+                top: 27px;
+                right: 2px;
+            }
+
+            #packages ul>li article.featured .ribbon i.left,
+            #packages ul>li article.featured .ribbon i.right {
+                display: none;
+            }
+
+        #packages ul>li article header h2 {
+            text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+        }
+
+        #packages ul>li article header h3 {
+            text-transform: none;
+            font-weight: normal;
+            margin: 25px 15px !important;
+        }
+
+        #packages ul>li article .offer {
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 15px;
+        }
+
+            #packages ul>li article .offer .price {
+                min-height: 85px;
+            }
+
+                #packages ul>li article .offer .price var {
+                    line-height: 85px;
+                }
+
+#packages ul>li article .cta {
+    margin-top: 8px;
+}
+
+/**
+ * Features
+ */
+
+#packages ul>li article .features {
+    text-align: center;
+    border: none;
+}
+
+    #packages ul>li article .features li {
+        margin: 0;
+    }
+
+    #packages ul>li article .features li:before {
+        display: none;
+    }
+
+/**
+ * Licenses
+ */
+
+.licenses li {
+    padding: 15px;
+}
+
+    .licenses li input:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+/**
+ * Buttons
+ */
+
+/* All */
+
+#packages ul>li article .cta button {
+    box-shadow: none;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Featured */
+
+#packages ul>li article.featured .cta button {
+    border: 1px solid #509304;
+    border-bottom: 5px solid #509304;
+    background-color: #6bc406;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
+#packages ul>li article.featured .cta button:hover {
+    background-color: #74d609;
+}
+
+/* Tertiary */
+
+#packages ul>li article .cta button.btn-tertiary {
+    background-color: #dcdee1;
+    border: 1px solid #a7a9ab;
+    border-bottom: 5px solid #a7a9ab;
+}
+
+#packages ul>li article .cta button.btn-tertiary:hover {
+    background-color: #e9ebee;
+}
+
+    #packages ul>li article .cta button.btn-tertiary span {
+        text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+        color: #7c7d7f;
+    }
+
+/**
+ * Support
+ */
+
+.support var {
+    display: none;
+}
+
+.support {
+    display: block;
+    text-align: center;
+}
+
+.support:before {
+    content: "Forum Support";
+}
+
+article.featured .support:before {
+    content: "Priority Ticket System";
+}
