@@ -2447,6 +2447,21 @@ body.page-id-175 main h1 {
 /*====================================
 =            Product page            =
 ====================================*/
+body.product-template-default .type-product .images .woocommerce-main-image {
+  width: 78%;
+  float: right; }
+body.product-template-default .type-product .images .thumbnails {
+  width: 20%;
+  float: left;
+  margin: 0 2% 0 0;
+  padding: 0 !important; }
+  body.product-template-default .type-product .images .thumbnails a {
+    width: 100% !important;
+    border-radius: 100px; }
+    body.product-template-default .type-product .images .thumbnails a img {
+      border-radius: 100px; }
+    body.product-template-default .type-product .images .thumbnails a:hover, body.product-template-default .type-product .images .thumbnails a.active {
+      border: solid 2px green; }
 body.product-template-default .swatch-wrapper {
   border-radius: 100px;
   overflow: hidden; }

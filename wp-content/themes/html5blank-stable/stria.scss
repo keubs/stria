@@ -196,6 +196,31 @@ body.page-id-175 main h1 {
 body.product-template-default {
 	// background: #289320;
 
+	.type-product .images .woocommerce-main-image {
+		width: 78%;
+		float: right;
+	}
+
+	.type-product .images .thumbnails {
+		width: 20%;
+		float: left;
+		margin: 0 2% 0 0;
+		padding: 0 !important;
+
+		a {
+			width: 100% !important;
+			border-radius: 100px;
+
+			img {
+				border-radius: 100px;
+			}
+
+			&:hover, &.active {
+				border: solid 2px green;
+			}
+		}
+	}
+
 	.swatch-wrapper {
 		border-radius: 100px;
 		overflow: hidden;
