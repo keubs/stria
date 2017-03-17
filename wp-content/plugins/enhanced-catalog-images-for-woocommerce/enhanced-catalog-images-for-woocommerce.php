@@ -257,6 +257,11 @@ class Iconic_Woo_Enhanced_Catalog_Images
     public function dynamic_css()
     {
         $effect = $this->settings['general_display_effect'];
+        if(!isset($this->settings['effects_thumbnails_column_count'])){
+            $cols = 3;
+        } else {
+            $cols = $this->settings['effects_thumbnails_column_count'];
+        }
         $css = array(
             'fade'               => array(
             '.iconic-ecifw-product-image--fade img:first-child' => array(
@@ -291,7 +296,7 @@ class Iconic_Woo_Enhanced_Catalog_Images
         ),
             '.iconic-ecifw-product-image__thumbnails li' => array(
             'padding' => sprintf( '0 %dpx %dpx', $this->settings['effects_thumbnails_spacing'] / 2, $this->settings['effects_thumbnails_spacing'] ),
-            'width'   => sprintf( '%.04f%%', 100 / $this->settings['effects_thumbnails_column_count'] ),
+            'width'   => sprintf( '%.04f%%', 100 / $cols ),
         ),
         ),
             'flip-premium'       => array(
