@@ -1260,7 +1260,7 @@ class RevSliderOutput {
 				if(empty($arguments))
 					$arguments = RevSliderGlobals::DEFAULT_VIMEO_ARGUMENTS;
 				
-				$arguments ='background=1&'.$arguments;
+				$arguments ='background=1&'.$arguments.'&loop=1';
 				if($mute_video == 'off'){
 					$add_data .= '			data-volume="'.intval($volume_video).'"'." \n";
 				}
@@ -1320,7 +1320,7 @@ class RevSliderOutput {
 		if($loop === true){ //fallback
 			$add_data .= '			data-videoloop="loop"'." \n";
 		}else{
-			$add_data .= '			data-videoloop="'.$loop.'"'." \n";
+			$add_data .= '			data-videoloop="1"';
 		}
 		
 		if($cover == 'on'){
@@ -2124,7 +2124,7 @@ class RevSliderOutput {
 				if(RevSliderFunctions::strToBool($videoloop) == true){ //fallback
 					$add_data .= ' data-videoloop="loop"';
 				}else{
-					$add_data .= ' data-videoloop="'.$videoloop.'"';
+					$add_data .= ' data-videoloop="1"';
 				}
 				
 				$videoAutoplay = false;
@@ -2361,7 +2361,7 @@ class RevSliderOutput {
 				if(RevSliderFunctions::strToBool($videoloop) == true){ //fallback
 					$add_data .= ' data-videoloop="loop"';
 				}else{
-					$add_data .= ' data-videoloop="'.$videoloop.'"';
+					$add_data .= ' data-videoloop="1"';
 				}
 				
 				if($cover == true){
