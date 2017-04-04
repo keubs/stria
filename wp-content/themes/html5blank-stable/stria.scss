@@ -245,6 +245,11 @@ body.product-template-default.woocommerce-page {
 		}
 	}
 
+	#content .related.products {
+		clear: both;
+		width: 100%;
+	}
+
 	.swatch-wrapper {
 		border-radius: 100px;
 		overflow: hidden;

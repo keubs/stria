@@ -56,6 +56,8 @@ if (function_exists('add_theme_support'))
 
     // Localisation Support
     load_theme_textdomain('html5blank', get_template_directory() . '/languages');
+
+
 }
 
 /*------------------------------------*\
@@ -344,6 +346,16 @@ function html5blankcomments($comment, $args, $depth)
 	<?php endif; ?>
 <?php }
 
+function woo_remove_product_tabs( $tabs ) {
+
+    unset( $tabs['description'] );          // Remove the description tab
+    unset( $tabs['reviews'] );          // Remove the reviews tab
+    unset( $tabs['additional_information'] );   // Remove the additional information tab
+
+    return $tabs;
+
+}
+
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
@@ -399,6 +411,8 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 
 // Shortcodes above would be nested like this -
 // [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+
 
 /*------------------------------------*\
 	Custom Post Types
