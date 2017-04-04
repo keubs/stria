@@ -2528,6 +2528,7 @@ body.my-account #post-161 {
 ==================================*/
 #post-164 .about-body {
   background: url("img/bg_aboutme.jpg") no-repeat;
+  background-position: center center;
   background-size: cover;
   width: 100%;
   min-height: 600px; }
