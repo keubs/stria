@@ -2523,82 +2523,118 @@ body.my-account #post-161 {
     body.my-account #post-161 {
       width: 100%; } }
 
+/*==================================
+=            about page            =
+==================================*/
+#post-164 .about-body {
+  background: url("img/bg_aboutme.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 600px; }
+  @media (max-width: 768px) {
+    #post-164 .about-body {
+      background: url("img/bg_aboutme.jpg") no-repeat;
+      background-position: center;
+      background-size: cover; } }
+#post-164 .about-inner {
+  border: solid 1px #000;
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1.2em;
+  width: 70%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  position: absolute; }
+  @media (max-width: 768px) {
+    #post-164 .about-inner {
+      width: 95%;
+      max-height: 570px;
+      overflow: auto; } }
+#post-164 .semiopaque-bg {
+  position: absolute;
+  opacity: .5;
+  background: #FFF;
+  z-index: 98;
+  width: 100%;
+  height: 600px; }
+
+/*=====  End of about page  ======*/
 /*==============================
 =            Footer            =
 ==============================*/
-footer {
-  padding: 0 1em; }
-  footer #mailchimpsf_widget-2 {
-    width: 25%;
-    margin-bottom: -80px; }
-    footer #mailchimpsf_widget-2 h3 {
-      margin: 0;
-      text-transform: uppercase;
-      font-size: 16.5px; }
-    footer #mailchimpsf_widget-2 #mc_signup_submit {
-      margin-top: 10px; }
-    footer #mailchimpsf_widget-2 label[for=mc_mv_EMAIL] {
-      display: none; }
-    footer #mailchimpsf_widget-2 .mc_merge_var {
-      display: inline-block;
-      width: 63%; }
-    footer #mailchimpsf_widget-2 .mc_signup_submit {
-      display: inline-block;
-      width: 35%; }
+footer #mailchimpsf_widget-2 {
+  width: 25%;
+  margin-bottom: -80px; }
+  footer #mailchimpsf_widget-2 h3 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 16.5px; }
+  footer #mailchimpsf_widget-2 #mc_signup_submit {
+    margin-top: 10px; }
+  footer #mailchimpsf_widget-2 label[for=mc_mv_EMAIL] {
+    display: none; }
+  footer #mailchimpsf_widget-2 .mc_merge_var {
+    display: inline-block;
+    width: 63%; }
+  footer #mailchimpsf_widget-2 .mc_signup_submit {
+    display: inline-block;
+    width: 35%; }
+  @media (max-width: 768px) {
+    footer #mailchimpsf_widget-2 {
+      width: 100%;
+      margin: 20px auto;
+      text-align: center; } }
+footer #text-4 {
+  text-align: center; }
+  @media (max-width: 768px) {
+    footer #text-4 {
+      border-bottom: solid 2px #231F20;
+      padding-bottom: 10px; } }
+footer #text-3 a {
+  margin-left: 20px; }
+footer #wpcw_social-3 {
+  padding-bottom: 1em; }
+  footer #wpcw_social-3 li {
+    margin: 1em 0 0 45px; }
     @media (max-width: 768px) {
-      footer #mailchimpsf_widget-2 {
-        width: 100%;
-        margin: 20px auto;
+      footer #wpcw_social-3 li {
+        float: none;
+        margin: 0;
+        width: 25%;
         text-align: center; } }
-  footer #text-4 {
-    text-align: center; }
-    @media (max-width: 768px) {
-      footer #text-4 {
-        border-bottom: solid 2px #231F20;
-        padding-bottom: 10px; } }
-  footer #text-3 a {
-    margin-left: 20px; }
-  footer #wpcw_social-3 {
-    padding-bottom: 1em; }
-    footer #wpcw_social-3 li {
-      margin: 1em 0 0 45px; }
+footer #text-3,
+footer #wpcw_social-3 {
+  text-align: right; }
+  @media (max-width: 768px) {
+    footer #text-3,
+    footer #wpcw_social-3 {
+      text-align: center;
+      margin: 2em 0 1em; } }
+footer #nav_menu-23 {
+  width: 100%;
+  border-top: solid 3px #231F20;
+  padding: .5em 0; }
+  footer #nav_menu-23 ul {
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+    footer #nav_menu-23 ul li {
+      float: left;
+      list-style: none;
+      width: 16.5%;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 1em 0; }
+      footer #nav_menu-23 ul li:first-child {
+        text-align: left; }
+      footer #nav_menu-23 ul li:last-child {
+        text-align: right; }
       @media (max-width: 768px) {
-        footer #wpcw_social-3 li {
-          float: none;
-          margin: 0;
-          width: 25%;
-          text-align: center; } }
-  footer #text-3,
-  footer #wpcw_social-3 {
-    text-align: right; }
-    @media (max-width: 768px) {
-      footer #text-3,
-      footer #wpcw_social-3 {
-        text-align: center;
-        margin: 2em 0 1em; } }
-  footer #nav_menu-23 {
-    width: 100%;
-    border-top: solid 3px #231F20;
-    padding: .5em 0; }
-    footer #nav_menu-23 ul {
-      margin: 0;
-      padding: 0;
-      width: 100%; }
-      footer #nav_menu-23 ul li {
-        float: left;
-        list-style: none;
-        width: 16.5%;
-        text-transform: uppercase;
-        text-align: center;
-        padding: 1em 0; }
-        footer #nav_menu-23 ul li:first-child {
-          text-align: left; }
-        footer #nav_menu-23 ul li:last-child {
-          text-align: right; }
-        @media (max-width: 768px) {
-          footer #nav_menu-23 ul li {
-            width: 100%;
-            text-align: center !important; } }
+        footer #nav_menu-23 ul li {
+          width: 100%;
+          text-align: center !important; } }
 
 /*=====  End of Footer  ======*/
 
