@@ -2456,12 +2456,9 @@ body.product-template-default .type-product .images .thumbnails {
   margin: 0 2% 0 0;
   padding: 0 !important; }
   body.product-template-default .type-product .images .thumbnails a {
-    width: 100% !important;
-    border-radius: 200px; }
-    body.product-template-default .type-product .images .thumbnails a img {
-      border-radius: 200px; }
+    width: 100% !important; }
     body.product-template-default .type-product .images .thumbnails a:hover, body.product-template-default .type-product .images .thumbnails a.active {
-      border: solid 2px green; }
+      border: solid 2px #000; }
 body.product-template-default .swatch-wrapper {
   border-radius: 100px;
   overflow: hidden; }
@@ -2492,10 +2489,22 @@ body.product-template-default .attribute_pa_color_picker_label {
 /*=====================================
 =            Lookbook page            =
 =====================================*/
-body.page-id-180 main h1 {
+body.page-id-180 main h1,
+body.page-id-180 #content h1,
+body.page-id-164 main h1,
+body.page-id-164 #content h1,
+body.post-type-archive-product main h1,
+body.post-type-archive-product #content h1 {
   display: none; }
 
 /*=====  End of Lookbook page  ======*/
+body.my-account #post-161 {
+  width: 25%;
+  margin: 0 auto; }
+  @media (max-width: 768px) {
+    body.my-account #post-161 {
+      width: 100%; } }
+
 /*==============================
 =            Footer            =
 ==============================*/

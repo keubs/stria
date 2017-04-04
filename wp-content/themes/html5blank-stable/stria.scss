@@ -209,14 +209,14 @@ body.product-template-default {
 
 		a {
 			width: 100% !important;
-			border-radius: 200px;
+			// border-radius: 200px;
 
 			img {
-				border-radius: 200px;
+				// border-radius: 200px;
 			}
 
 			&:hover, &.active {
-				border: solid 2px green;
+				border: solid 2px #000;
 			}
 		}
 	}
@@ -272,14 +272,27 @@ body.product-template-default {
 =            Lookbook page            =
 =====================================*/
 
-body.page-id-180 {
-	main h1 {
+body.page-id-180,
+body.page-id-164,
+body.post-type-archive-product {
+	main h1,
+	#content h1 {
 		display: none;
 	}
 }
 
 /*=====  End of Lookbook page  ======*/
 
+body.my-account {
+	#post-161 {
+		width: 25%;
+		margin: 0 auto;
+
+		@media (max-width: 768px) { 
+			width: 100%;
+		}
+	}
+}
 
 /*==============================
 =            Footer            =
