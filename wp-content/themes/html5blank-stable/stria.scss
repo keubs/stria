@@ -104,6 +104,85 @@ nav.navbar {
 
 /*=====  End of Override Styles  ======*/
 
+/*====================================
+=            Popup styles            =
+====================================*/
+
+#popmake-507 {
+	.pum-content{
+		color: #231f20;
+
+		h1 {
+			font-size: 60px;
+		}
+
+		h3 {
+			@media (max-width: 768px) {
+				line-height: 22px;
+				font-size: 15px;
+			}
+		}
+	}
+
+	#mc_embed_signup {
+		background: transparent;
+
+		p {
+			display: inline-block;
+
+			@media (max-width: 768px) {
+				display: block;
+			}
+		}
+
+		a {
+			text-decoration: underline;
+		}
+
+		input[type=text],
+		input[type=email] {
+			display: inline-block;
+			padding: 8px 3px;
+
+			@media (max-width: 768px) {
+				width: 100%;
+			}
+		}
+
+		input[type=submit] {
+			background: #231f20;
+			color: #FFF;
+		    padding: 7.5px 10px;
+		    border-radius: 0px;
+		    margin-left: -4px;
+		    border: solid 1px black;
+
+		    @media (max-width: 768px) {
+		    	width: 100%;
+		    }
+		}
+	}
+
+	#mc-embedded-subscribe-form {
+		width: 33%;
+	    margin: 0 auto;
+
+	    .clear {
+	    	display: inline-block;
+
+	    	@media (max-width: 768px) {
+	    		width: 100%;
+	    	}
+	    }
+
+	    @media (max-width: 768px) {
+	    	width: 100%;
+	    }
+	}
+}
+
+/*=====  End of Popup styles  ======*/
+
 
 /*=======================================
 =            Homepage styles            =

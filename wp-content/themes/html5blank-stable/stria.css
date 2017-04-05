@@ -2389,6 +2389,57 @@ nav.navbar {
   padding: 0; }
 
 /*=====  End of Override Styles  ======*/
+/*====================================
+=            Popup styles            =
+====================================*/
+#popmake-507 .pum-content {
+  color: #231f20; }
+  #popmake-507 .pum-content h1 {
+    font-size: 60px; }
+  @media (max-width: 768px) {
+    #popmake-507 .pum-content h3 {
+      line-height: 22px;
+      font-size: 15px; } }
+#popmake-507 #mc_embed_signup {
+  background: transparent; }
+  #popmake-507 #mc_embed_signup p {
+    display: inline-block; }
+    @media (max-width: 768px) {
+      #popmake-507 #mc_embed_signup p {
+        display: block; } }
+  #popmake-507 #mc_embed_signup a {
+    text-decoration: underline; }
+  #popmake-507 #mc_embed_signup input[type=text],
+  #popmake-507 #mc_embed_signup input[type=email] {
+    display: inline-block;
+    padding: 8px 3px; }
+    @media (max-width: 768px) {
+      #popmake-507 #mc_embed_signup input[type=text],
+      #popmake-507 #mc_embed_signup input[type=email] {
+        width: 100%; } }
+  #popmake-507 #mc_embed_signup input[type=submit] {
+    background: #231f20;
+    color: #FFF;
+    padding: 7.5px 10px;
+    border-radius: 0px;
+    margin-left: -4px;
+    border: solid 1px black; }
+    @media (max-width: 768px) {
+      #popmake-507 #mc_embed_signup input[type=submit] {
+        width: 100%; } }
+#popmake-507 #mc-embedded-subscribe-form {
+  width: 33%;
+  margin: 0 auto; }
+  #popmake-507 #mc-embedded-subscribe-form .clear {
+    display: inline-block; }
+    @media (max-width: 768px) {
+      #popmake-507 #mc-embedded-subscribe-form .clear {
+        width: 100%; } }
+  @media (max-width: 768px) {
+    #popmake-507 #mc-embedded-subscribe-form {
+      width: 100%; } }
+
+/*=====  End of Popup styles  ======*/
 /*=======================================
 =            Homepage styles            =
 =======================================*/
