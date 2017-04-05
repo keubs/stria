@@ -2392,32 +2392,32 @@ nav.navbar {
 /*====================================
 =            Popup styles            =
 ====================================*/
-#popmake-507 .pum-content {
+.pum-container .pum-content {
   color: #231f20; }
-  #popmake-507 .pum-content h1 {
+  .pum-container .pum-content h1 {
     font-size: 60px; }
   @media (max-width: 768px) {
-    #popmake-507 .pum-content h3 {
+    .pum-container .pum-content h3 {
       line-height: 22px;
       font-size: 15px; } }
-#popmake-507 #mc_embed_signup {
+.pum-container #mc_embed_signup {
   background: transparent; }
-  #popmake-507 #mc_embed_signup p {
+  .pum-container #mc_embed_signup p {
     display: inline-block; }
     @media (max-width: 768px) {
-      #popmake-507 #mc_embed_signup p {
+      .pum-container #mc_embed_signup p {
         display: block; } }
-  #popmake-507 #mc_embed_signup a {
+  .pum-container #mc_embed_signup a {
     text-decoration: underline; }
-  #popmake-507 #mc_embed_signup input[type=text],
-  #popmake-507 #mc_embed_signup input[type=email] {
+  .pum-container #mc_embed_signup input[type=text],
+  .pum-container #mc_embed_signup input[type=email] {
     display: inline-block;
     padding: 8px 3px; }
     @media (max-width: 768px) {
-      #popmake-507 #mc_embed_signup input[type=text],
-      #popmake-507 #mc_embed_signup input[type=email] {
+      .pum-container #mc_embed_signup input[type=text],
+      .pum-container #mc_embed_signup input[type=email] {
         width: 100%; } }
-  #popmake-507 #mc_embed_signup input[type=submit] {
+  .pum-container #mc_embed_signup input[type=submit] {
     background: #231f20;
     color: #FFF;
     padding: 7.5px 10px;
@@ -2425,18 +2425,18 @@ nav.navbar {
     margin-left: -4px;
     border: solid 1px black; }
     @media (max-width: 768px) {
-      #popmake-507 #mc_embed_signup input[type=submit] {
+      .pum-container #mc_embed_signup input[type=submit] {
         width: 100%; } }
-#popmake-507 #mc-embedded-subscribe-form {
+.pum-container #mc-embedded-subscribe-form {
   width: 33%;
   margin: 0 auto; }
-  #popmake-507 #mc-embedded-subscribe-form .clear {
+  .pum-container #mc-embedded-subscribe-form .clear {
     display: inline-block; }
     @media (max-width: 768px) {
-      #popmake-507 #mc-embedded-subscribe-form .clear {
+      .pum-container #mc-embedded-subscribe-form .clear {
         width: 100%; } }
   @media (max-width: 768px) {
-    #popmake-507 #mc-embedded-subscribe-form {
+    .pum-container #mc-embedded-subscribe-form {
       width: 100%; } }
 
 /*=====  End of Popup styles  ======*/
