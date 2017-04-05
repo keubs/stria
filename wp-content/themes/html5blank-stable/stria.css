@@ -2393,7 +2393,7 @@ nav.navbar {
 =            Popup styles            =
 ====================================*/
 .pum-container .pum-content {
-  color: #231f20; }
+  color: #231f20 !important; }
   .pum-container .pum-content h1 {
     font-size: 60px; }
   @media (max-width: 768px) {
