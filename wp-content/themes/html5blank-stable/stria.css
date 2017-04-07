@@ -2343,6 +2343,10 @@ a {
   width: 95%;
   margin: 0 auto; }
 
+#container,
+main {
+  min-height: 810px; }
+
 nav.navbar {
   margin: -2em 0 0 0;
   background: none;
