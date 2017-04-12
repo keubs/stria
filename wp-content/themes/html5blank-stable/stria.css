@@ -2351,7 +2351,8 @@ nav.navbar {
   margin: -2em 0 0 0;
   background: none;
   background-color: transparent;
-  border: none; }
+  border: none;
+  /* Dropdown */ }
   nav.navbar ul {
     padding: 0;
     margin: 0;
@@ -2375,6 +2376,18 @@ nav.navbar {
         padding: 10px 0; } }
   nav.navbar a {
     color: #231F20; }
+  nav.navbar ul ul {
+    display: none;
+    position: absolute;
+    top: 20px;
+    background: #DDD;
+    width: 100px;
+    padding: 10px;
+    left: -5px; }
+    nav.navbar ul ul li {
+      padding: 5px 5px; }
+  nav.navbar ul li:hover > ul {
+    display: inherit; }
   @media (max-width: 768px) {
     nav.navbar {
       margin: -40px 20px 1em 20px; } }

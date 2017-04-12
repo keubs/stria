@@ -84,6 +84,24 @@ nav.navbar {
 		color: $dark;
 	}
 
+	/* Dropdown */
+	ul ul {
+		display: none;
+		position: absolute;
+	    top: 20px;
+	    background: #DDD;
+	    width: 100px;
+	    padding: 10px;
+	    left: -5px;
+
+	    li {
+	    	padding: 5px 5px;
+	    }
+	}
+
+	ul li:hover > ul {
+		display:inherit;
+	}
 
 	@media (max-width: 768px) {
 		margin: -40px 20px 1em 20px;
