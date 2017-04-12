@@ -54,7 +54,7 @@ nav.navbar {
 		display: inline-block;
 		text-transform: uppercase;
 		position: relative;
-		
+
 		&:nth-child(1),
 		&:nth-child(2),
 		&:nth-child(3),
@@ -89,7 +89,7 @@ nav.navbar {
 	ul ul {
 		display: none;
 		position: absolute;
-	    top: 20px;
+	    top: 15px;
 	    background: #DDD;
 	    width: 100px;
 	    padding: 10px;

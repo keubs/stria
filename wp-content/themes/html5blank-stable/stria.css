@@ -2380,7 +2380,7 @@ nav.navbar {
   nav.navbar ul ul {
     display: none;
     position: absolute;
-    top: 20px;
+    top: 15px;
     background: #DDD;
     width: 100px;
     padding: 10px;
