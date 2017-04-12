@@ -2387,6 +2387,12 @@ nav.navbar {
     left: -5px; }
     nav.navbar ul ul li {
       padding: 5px 5px; }
+    @media (max-width: 768px) {
+      nav.navbar ul ul {
+        display: block;
+        position: static;
+        background: transparent;
+        padding: 10px; } }
   nav.navbar ul li:hover > ul {
     display: inherit; }
   @media (max-width: 768px) {
