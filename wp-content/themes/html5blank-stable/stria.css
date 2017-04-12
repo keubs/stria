@@ -2360,7 +2360,8 @@ nav.navbar {
   nav.navbar li {
     list-style: none;
     display: inline-block;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    position: relative; }
     nav.navbar li:nth-child(1), nav.navbar li:nth-child(2), nav.navbar li:nth-child(3), nav.navbar li:nth-child(4) {
       float: left;
       margin: 0 1em 0 0; }
