@@ -94,7 +94,8 @@ nav.navbar {
 	    width: 100px;
 	    padding: 10px;
 	    left: -5px;
-
+    	z-index: 9999;
+    	
 	    li {
 	    	padding: 5px 5px;
 	    }
