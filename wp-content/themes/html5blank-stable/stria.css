@@ -2384,7 +2384,8 @@ nav.navbar {
     background: #DDD;
     width: 100px;
     padding: 10px;
-    left: -5px; }
+    left: -5px;
+    z-index: 9999; }
     nav.navbar ul ul li {
       padding: 5px 5px; }
     @media (max-width: 768px) {
@@ -2520,6 +2521,13 @@ body.page-id-175 main h1 {
   text-align: center; }
 
 /*=====  End of Shop page  ======*/
+/*=====================================
+=            Checkout page            =
+=====================================*/
+body.woocommerce-checkout input {
+  padding: 10px 5px; }
+
+/*=====  End of Checkout page  ======*/
 /*====================================
 =            Product page            =
 ====================================*/
