@@ -2538,9 +2538,10 @@ body.product-template-default.woocommerce-page #content .type-product.product .s
   display: inline-block; }
   @media (max-width: 768px) {
     body.product-template-default.woocommerce-page #content .type-product.product .summary {
-      margin-top: 1.5em; } }
+      margin-top: 1.5em;
+      min-width: 100%; } }
 body.product-template-default.woocommerce-page #content .type-product .images .woocommerce-main-image {
-  width: 78%;
+  width: 68%;
   float: right; }
 body.product-template-default.woocommerce-page #content .type-product .woocommerce-variation-add-to-cart {
   width: 59%;
@@ -2551,7 +2552,7 @@ body.product-template-default.woocommerce-page #content .type-product .woocommer
 body.product-template-default.woocommerce-page #content .type-product form.cart {
   margin-top: 2em; }
 body.product-template-default.woocommerce-page .type-product .images .thumbnails {
-  width: 20%;
+  width: 30%;
   float: left;
   margin: 0 2% 0 0;
   padding: 0 !important; }
@@ -2562,10 +2563,12 @@ body.product-template-default.woocommerce-page .type-product .images .thumbnails
 body.product-template-default.woocommerce-page #content .related.products {
   clear: both;
   width: 100%; }
+body.product-template-default.woocommerce-page .swatch-label {
+  max-width: 255px; }
 body.product-template-default.woocommerce-page .swatch-wrapper {
   border-radius: 100px;
   overflow: hidden;
-  float: none;
+  float: left;
   display: inline-block; }
   body.product-template-default.woocommerce-page .swatch-wrapper.selected {
     border: 2px solid #333; }

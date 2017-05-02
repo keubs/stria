@@ -329,11 +329,12 @@ body.product-template-default.woocommerce-page {
 
 		@media (max-width: 768px) { 
 			margin-top: 1.5em;
+			min-width: 100%;
 		}
 	}
 
 	#content .type-product .images .woocommerce-main-image {
-		width: 78%;
+		width: 68%;
 		float: right;
 	}
 
@@ -351,7 +352,7 @@ body.product-template-default.woocommerce-page {
 	}
 
 	.type-product .images .thumbnails {
-		width: 20%;
+		width: 30%;
 		float: left;
 		margin: 0 2% 0 0;
 		padding: 0 !important;
@@ -375,10 +376,14 @@ body.product-template-default.woocommerce-page {
 		width: 100%;
 	}
 
+	.swatch-label {
+		max-width: 255px;
+	}
+
 	.swatch-wrapper {
 		border-radius: 100px;
 		overflow: hidden;
-		float: none;
+		float: left;
 		display: inline-block;
 
 		&.selected {
