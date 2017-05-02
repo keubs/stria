@@ -570,10 +570,11 @@ footer {
 
 	#text-4 {
 		text-align: center;
-
+		margin-bottom: -20px;
 		@media (max-width: 768px) {
 			border-bottom: solid 2px $dark;
 			padding-bottom: 10px;
+			margin-bottom: 0px;
 		}
 	}
 
