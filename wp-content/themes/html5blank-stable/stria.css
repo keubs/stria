@@ -2654,6 +2654,14 @@ body.my-account #post-161 {
   height: 600px; }
 
 /*=====  End of about page  ======*/
+/*==================================
+=            About page            =
+==================================*/
+body.page-id-19 article {
+  width: 50%;
+  margin: 0 auto; }
+
+/*=====  End of About page  ======*/
 /*==============================
 =            Footer            =
 ==============================*/
