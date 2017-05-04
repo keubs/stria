@@ -530,6 +530,10 @@ body.page-id-19 {
 		input, form span, label, textarea {
 			width: 100%;
 		}
+
+		@media (max-width: 768px) { 
+			width: 100%;
+		}
 	}
 }
 

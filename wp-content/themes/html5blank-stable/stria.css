@@ -2662,6 +2662,9 @@ body.page-id-19 article {
   margin: 0 auto; }
   body.page-id-19 article input, body.page-id-19 article form span, body.page-id-19 article label, body.page-id-19 article textarea {
     width: 100%; }
+  @media (max-width: 768px) {
+    body.page-id-19 article {
+      width: 100%; } }
 
 /*=====  End of About page  ======*/
 /*==============================
