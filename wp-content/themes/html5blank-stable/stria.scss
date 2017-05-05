@@ -347,6 +347,27 @@ body.product-template-default.woocommerce-page {
 			width: 100%;
 		}
 	}
+
+	#content .type-product .woocommerce-product-gallery {
+		.flex-viewport {
+			width: 68%;
+			float: right;
+		}
+
+		.flex-control-nav {
+			width: 31%;
+			float: left;
+			margin-right: 1%;
+			max-height: 900px;
+			overflow-y: auto;
+
+			li {
+				width: 100%;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
 	#content .type-product form.cart {
 		margin-top: 2em;
 	}

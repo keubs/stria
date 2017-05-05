@@ -2549,6 +2549,18 @@ body.product-template-default.woocommerce-page #content .type-product .woocommer
   margin-left: 100px; }
   body.product-template-default.woocommerce-page #content .type-product .woocommerce-variation-add-to-cart button {
     width: 100%; }
+body.product-template-default.woocommerce-page #content .type-product .woocommerce-product-gallery .flex-viewport {
+  width: 68%;
+  float: right; }
+body.product-template-default.woocommerce-page #content .type-product .woocommerce-product-gallery .flex-control-nav {
+  width: 31%;
+  float: left;
+  margin-right: 1%;
+  max-height: 900px;
+  overflow-y: auto; }
+  body.product-template-default.woocommerce-page #content .type-product .woocommerce-product-gallery .flex-control-nav li {
+    width: 100%;
+    margin-bottom: 10px; }
 body.product-template-default.woocommerce-page #content .type-product form.cart {
   margin-top: 2em; }
 body.product-template-default.woocommerce-page .type-product .images .thumbnails {
