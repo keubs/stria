@@ -543,29 +543,31 @@ body.my-account {
 /*===================================
 =            sizing page            =
 ===================================*/
+body.sizing{
+	
+	.chart {
+		padding: 10px; border: solid 1px #222;
+		float: left;
+		margin: 20px 5% 0 0;
+		padding: 20px;
+		max-width: 40%;
+		table {
+			width: 100%;
 
-.chart {
-	padding: 10px; border: solid 1px #222;
-	float: left;
-	margin: 20px 5% 0 0;
-	padding: 20px;
-	max-width: 40%;
-	table {
-		width: 100%;
-
-		td {
-			padding: 15px 10px;
+			td {
+				padding: 15px 10px;
+			}
+			
 		}
-		
+
+
 	}
 
-
-}
-
-.instructions {
-	float: left;
-	padding: 40px 20px 40px 50px;
-	font-size: 11px;
+	.instructions {
+		float: left;
+		padding: 40px 20px 40px 30px;
+		font-size: 11px;
+	}
 }
 
 /*=====  End of sizing page  ======*/
