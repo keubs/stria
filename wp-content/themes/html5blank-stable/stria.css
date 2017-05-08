@@ -2685,7 +2685,8 @@ body.sizing .chart {
       padding: 15px 10px; }
     @media (max-width: 768px) {
       body.sizing .chart table {
-        width: 100% !important; } }
+        width: 80% !important;
+        margin: 0 auto; } }
   @media (max-width: 768px) {
     body.sizing .chart {
       width: 100% !important;
