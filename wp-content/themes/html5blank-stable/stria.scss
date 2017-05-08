@@ -558,11 +558,14 @@ body.sizing{
 				padding: 15px 10px;
 			}
 			
+			@media (max-width: 768px) { 
+				width: 100% !important;
+			}
 		}
 
 		@media (max-width: 768px) { 
-			width: 100%;
-			max-width: 100%;
+			width: 100% !important;
+			max-width: 100% !important;
 			margin: 20px 0;
 			padding: 10px;
 		}
@@ -574,8 +577,8 @@ body.sizing{
 		font-size: 11px;
 
 		@media (max-width: 768px) { 
-			width: 100%;
-			max-width: 100%;
+			width: 100% !important;
+			max-width: 100% !important;
 			margin: 20px 0;
 			padding: 10px;
 		}
