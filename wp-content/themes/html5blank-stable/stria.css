@@ -2681,6 +2681,10 @@ body.my-account #post-161 {
     .chart table td {
       padding: 15px 10px; }
 
+.instructions {
+  float: left;
+  padding: 40px 20px 40px 50px; }
+
 /*=====  End of sizing page  ======*/
 /*==================================
 =            About page            =
