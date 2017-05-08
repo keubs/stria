@@ -2559,8 +2559,8 @@ body.product-template-default.woocommerce-page #content .type-product .woocommer
   max-height: 900px;
   overflow-y: auto; }
   body.product-template-default.woocommerce-page #content .type-product .woocommerce-product-gallery .flex-control-nav li {
-    width: 100%;
-    margin-bottom: 10px; }
+    width: 49%;
+    margin: 0 .5% 10px 0; }
 body.product-template-default.woocommerce-page #content .type-product form.cart {
   margin-top: 2em; }
 body.product-template-default.woocommerce-page .type-product .images .thumbnails {
