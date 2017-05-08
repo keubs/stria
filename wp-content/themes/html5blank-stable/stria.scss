@@ -560,13 +560,19 @@ body.sizing{
 			
 		}
 
-
+		@media (max-width: 768px) { 
+			width: 100%;
+		}
 	}
 
 	.instructions {
 		float: left;
 		padding: 40px 20px 40px 30px;
 		font-size: 11px;
+
+		@media (max-width: 768px) { 
+			width: 100%;
+		}
 	}
 }
 

@@ -2680,10 +2680,16 @@ body.sizing .chart {
     width: 100%; }
     body.sizing .chart table td {
       padding: 15px 10px; }
+  @media (max-width: 768px) {
+    body.sizing .chart {
+      width: 100%; } }
 body.sizing .instructions {
   float: left;
   padding: 40px 20px 40px 30px;
   font-size: 11px; }
+  @media (max-width: 768px) {
+    body.sizing .instructions {
+      width: 100%; } }
 
 /*=====  End of sizing page  ======*/
 /*==================================
