@@ -545,8 +545,16 @@ body.my-account {
 ===================================*/
 
 .chart {
-	td {
-		padding: 15px 10px;
+
+	display: inline-block;
+	margin: 5%;
+	
+	table {
+		max-width: 40%;
+		td {
+			padding: 15px 10px;
+		}
+		
 	}
 }
 

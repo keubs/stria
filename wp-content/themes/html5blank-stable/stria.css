@@ -2669,8 +2669,13 @@ body.my-account #post-161 {
 /*===================================
 =            sizing page            =
 ===================================*/
-.chart td {
-  padding: 15px 10px; }
+.chart {
+  display: inline-block;
+  margin: 5%; }
+  .chart table {
+    max-width: 40%; }
+    .chart table td {
+      padding: 15px 10px; }
 
 /*=====  End of sizing page  ======*/
 /*==================================
