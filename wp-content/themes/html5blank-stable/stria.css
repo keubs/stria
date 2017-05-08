@@ -2670,6 +2670,8 @@ body.my-account #post-161 {
 =            sizing page            =
 ===================================*/
 .chart {
+  padding: 10px;
+  border: solid 1px #222;
   display: inline-block;
   margin: 0 5% 0 0;
   padding: 20px;
