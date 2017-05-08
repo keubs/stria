@@ -2682,14 +2682,16 @@ body.sizing .chart {
       padding: 15px 10px; }
   @media (max-width: 768px) {
     body.sizing .chart {
-      width: 100%; } }
+      width: 100%;
+      margin: 20px 0; } }
 body.sizing .instructions {
   float: left;
   padding: 40px 20px 40px 30px;
   font-size: 11px; }
   @media (max-width: 768px) {
     body.sizing .instructions {
-      width: 100%; } }
+      width: 100%;
+      padding: 10px; } }
 
 /*=====  End of sizing page  ======*/
 /*==================================
