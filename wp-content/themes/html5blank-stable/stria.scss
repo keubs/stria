@@ -548,9 +548,11 @@ body.my-account {
 
 	display: inline-block;
 	margin: 5%;
-	
+	padding: 20px;
+	max-width: 40%;
 	table {
-		max-width: 40%;
+		width: 100%;
+		
 		td {
 			padding: 15px 10px;
 		}
