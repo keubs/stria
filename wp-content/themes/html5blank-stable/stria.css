@@ -2683,7 +2683,9 @@ body.sizing .chart {
   @media (max-width: 768px) {
     body.sizing .chart {
       width: 100%;
-      margin: 20px 0; } }
+      max-width: 100%;
+      margin: 20px 0;
+      padding: 10px; } }
 body.sizing .instructions {
   float: left;
   padding: 40px 20px 40px 30px;
@@ -2691,6 +2693,8 @@ body.sizing .instructions {
   @media (max-width: 768px) {
     body.sizing .instructions {
       width: 100%;
+      max-width: 100%;
+      margin: 20px 0;
       padding: 10px; } }
 
 /*=====  End of sizing page  ======*/

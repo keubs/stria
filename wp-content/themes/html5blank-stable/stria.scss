@@ -562,7 +562,9 @@ body.sizing{
 
 		@media (max-width: 768px) { 
 			width: 100%;
+			max-width: 100%;
 			margin: 20px 0;
+			padding: 10px;
 		}
 	}
 
@@ -573,6 +575,8 @@ body.sizing{
 
 		@media (max-width: 768px) { 
 			width: 100%;
+			max-width: 100%;
+			margin: 20px 0;
 			padding: 10px;
 		}
 	}
