@@ -2669,6 +2669,9 @@ body.my-account #post-161 {
 /*===================================
 =            sizing page            =
 ===================================*/
+body.sizing article {
+  max-width: 1200px;
+  margin: 0 auto; }
 body.sizing .chart {
   padding: 10px;
   border: solid 1px #222;
