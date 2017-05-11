@@ -2558,6 +2558,7 @@ body.product-template-default.woocommerce-page #content .type-product .woocommer
   float: right; }
   @media (max-width: 768px) {
     body.product-template-default.woocommerce-page #content .type-product .woocommerce-product-gallery .flex-viewport {
+      margin-top: 10px;
       float: none;
       width: 100%; } }
 body.product-template-default.woocommerce-page #content .type-product .woocommerce-product-gallery .flex-control-nav {
