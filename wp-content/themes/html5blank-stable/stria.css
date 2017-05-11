@@ -2606,6 +2606,17 @@ body.product-template-default.woocommerce-page #picker-pa-color {
   text-align: center; }
 
 /*=====  End of Product page  ======*/
+/*=================================
+=            Cart Page            =
+=================================*/
+body.woocommerce-cart table.cart img {
+  width: 80px; }
+body.woocommerce-cart table.cart td.product-remove a, body.woocommerce-cart table.cart td.product-remove a:focus {
+  width: auto;
+  height: auto;
+  border-radius: 0px; }
+
+/*=====  End of Cart Page  ======*/
 /*=====================================
 =            Lookbook page            =
 =====================================*/

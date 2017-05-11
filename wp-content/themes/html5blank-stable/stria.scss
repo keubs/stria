@@ -453,6 +453,29 @@ body.product-template-default.woocommerce-page {
 
 /*=====  End of Product page  ======*/
 
+
+/*=================================
+=            Cart Page            =
+=================================*/
+
+body.woocommerce-cart {
+	table.cart {
+		img {
+			width: 80px;
+		}
+
+		td.product-remove a, td.product-remove a:focus {
+			width: auto;
+			height: auto;
+			border-radius: 0px;
+		}
+	}
+
+}
+
+/*=====  End of Cart Page  ======*/
+
+
 /*=====================================
 =            Lookbook page            =
 =====================================*/
