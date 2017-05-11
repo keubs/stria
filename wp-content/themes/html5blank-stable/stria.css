@@ -2543,6 +2543,10 @@ body.product-template-default.woocommerce-page #content .type-product.product .s
 body.product-template-default.woocommerce-page #content .type-product .images .woocommerce-main-image {
   width: 68%;
   float: right; }
+  @media (max-width: 768px) {
+    body.product-template-default.woocommerce-page #content .type-product .images .woocommerce-main-image {
+      float: none;
+      width: 100%; } }
 body.product-template-default.woocommerce-page #content .type-product .woocommerce-variation-add-to-cart {
   width: 59%;
   min-width: 170px;
@@ -2552,6 +2556,10 @@ body.product-template-default.woocommerce-page #content .type-product .woocommer
 body.product-template-default.woocommerce-page #content .type-product .woocommerce-product-gallery .flex-viewport {
   width: 68%;
   float: right; }
+  @media (max-width: 768px) {
+    body.product-template-default.woocommerce-page #content .type-product .woocommerce-product-gallery .flex-viewport {
+      float: none;
+      width: 100%; } }
 body.product-template-default.woocommerce-page #content .type-product .woocommerce-product-gallery .flex-control-nav {
   width: 32%;
   float: left;

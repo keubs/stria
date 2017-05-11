@@ -336,6 +336,11 @@ body.product-template-default.woocommerce-page {
 	#content .type-product .images .woocommerce-main-image {
 		width: 68%;
 		float: right;
+
+		@media (max-width: 768px) { 
+			float: none;
+			width: 100%;
+		}
 	}
 
 	#content .type-product .woocommerce-variation-add-to-cart {
@@ -352,6 +357,12 @@ body.product-template-default.woocommerce-page {
 		.flex-viewport {
 			width: 68%;
 			float: right;
+
+
+			@media (max-width: 768px) { 
+				float: none;
+				width: 100%;
+			}
 		}
 
 		.flex-control-nav {
