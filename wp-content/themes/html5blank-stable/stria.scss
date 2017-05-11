@@ -376,6 +376,11 @@ body.product-template-default.woocommerce-page {
 				width: 48%;
 				margin: 0 1% 2%
 			}
+
+			@media (max-width: 768px) { 
+				float: none;
+				width: 100%;
+			}
 		}
 	}
 

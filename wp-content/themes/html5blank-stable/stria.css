@@ -2569,6 +2569,10 @@ body.product-template-default.woocommerce-page #content .type-product .woocommer
   body.product-template-default.woocommerce-page #content .type-product .woocommerce-product-gallery .flex-control-nav li {
     width: 48%;
     margin: 0 1% 2%; }
+  @media (max-width: 768px) {
+    body.product-template-default.woocommerce-page #content .type-product .woocommerce-product-gallery .flex-control-nav {
+      float: none;
+      width: 100%; } }
 body.product-template-default.woocommerce-page #content .type-product form.cart {
   margin-top: 2em; }
 body.product-template-default.woocommerce-page .type-product .images .thumbnails {
