@@ -2404,7 +2404,14 @@ nav.navbar {
   float: left; }
 
 #navbar-toggle-cbox:checked ~ .collapse {
-  display: block; }
+  display: block;
+  position: absolute;
+  width: 110%;
+  background: #FFF;
+  min-height: 400px;
+  margin-left: -20px;
+  z-index: 999;
+  padding: 0 20px; }
 
 #navbar-toggle-cbox {
   display: none; }
