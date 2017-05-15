@@ -121,7 +121,8 @@ nav.navbar {
 	float: left;
 }
 
-#navbar-toggle-cbox:checked ~ .collapse {
+#navbar-toggle-cbox:checked ~ .collapse,
+#navbar-toggle-cbox:checked ~ .collapsing {
     display: block;
     position: absolute;
     width: 110%;
