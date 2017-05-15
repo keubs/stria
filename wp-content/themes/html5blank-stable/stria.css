@@ -2660,6 +2660,12 @@ body.my-account #post-161 {
     body.my-account #post-161 {
       width: 100%; } }
 
+body.faq article {
+  width: 55%; }
+  @media (max-width: 768px) {
+    body.faq article {
+      width: 100%; } }
+
 /*==================================
 =            about page            =
 ==================================*/
