@@ -2656,12 +2656,18 @@ body.post-type-archive-product #content h1 {
 /*=====  End of Lookbook page  ======*/
 body.my-account #post-161 {
   width: 55%; }
+  body.my-account #post-161 ul {
+    list-style: none;
+    padding: 0; }
   @media (max-width: 768px) {
     body.my-account #post-161 {
       width: 100%; } }
 
 body.faq article {
   width: 55%; }
+  body.faq article ul {
+    list-style: none;
+    padding: 0; }
   @media (max-width: 768px) {
     body.faq article {
       width: 100%; } }

@@ -527,6 +527,11 @@ body.my-account {
 		width: 55%;
 		// margin: 0 auto;
 
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+
 		@media (max-width: 768px) { 
 			width: 100%;
 		}
@@ -536,6 +541,10 @@ body.my-account {
 body.faq {
 	article {
 		width: 55%;
+		ul {
+			list-style: none;
+			padding: 0;
+		}
 
 		@media (max-width: 768px){
 			width: 100%;
