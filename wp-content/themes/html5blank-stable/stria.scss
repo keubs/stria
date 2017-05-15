@@ -15,6 +15,7 @@ body {
 
 a {
 	// color: $dark;
+	color: #23527c;
 }
 
  .logo {
@@ -694,6 +695,11 @@ footer {
 	// display: block;
 	// bottom: 0;
 	// width: 92%;
+
+
+	a {
+		color: $dark;
+	}
 
 	#mailchimpsf_widget-2 {
 		width: 25%;

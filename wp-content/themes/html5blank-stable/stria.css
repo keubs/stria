@@ -2329,6 +2329,9 @@ body {
   font-family: 'NeutraTextPS-Book';
   color: #231F20; }
 
+a {
+  color: #23527c; }
+
 .logo {
   margin: 1em auto .5em;
   display: block;
@@ -2763,6 +2766,8 @@ body.page-id-19 article {
 /*==============================
 =            Footer            =
 ==============================*/
+footer a {
+  color: #231F20; }
 footer #mailchimpsf_widget-2 {
   width: 25%;
   margin-bottom: -80px; }
