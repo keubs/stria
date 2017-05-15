@@ -2699,6 +2699,16 @@ body.my-account #post-161 {
 body.sizing article {
   max-width: 1200px;
   margin: 0 auto; }
+body.sizing #pgc-565-0-0 {
+  position: fixed; }
+  @media (max-width: 768px) {
+    body.sizing #pgc-565-0-0 {
+      position: static; } }
+body.sizing #pgc-565-0-1 {
+  margin-left: 25%; }
+  @media (max-width: 768px) {
+    body.sizing #pgc-565-0-1 {
+      margin: 0; } }
 body.sizing .chart {
   padding: 10px;
   border: solid 1px #222;

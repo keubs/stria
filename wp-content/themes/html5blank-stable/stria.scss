@@ -594,6 +594,22 @@ body.sizing{
 	}
 
 
+	#pgc-565-0-0 {
+		position: fixed;
+
+		@media (max-width: 768px) { 
+			position: static;
+		}
+	}
+
+	#pgc-565-0-1 {
+		margin-left: 25%;
+
+		@media (max-width: 768px) { 
+			margin: 0;
+		}
+	}
+
 	.chart {
 		padding: 10px; border: solid 1px #222;
 		float: left;
