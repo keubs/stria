@@ -2519,6 +2519,10 @@ body.page-id-175 main h1 {
   margin: .5em 0;
   background: #000;
   color: #FFF; }
+  @media (max-width: 768px) {
+    body.page-id-175 main h1 {
+      font-size: 35px;
+      letter-spacing: 10px; } }
 
 /*=====  End of Get Fitted page  ======*/
 /*=================================
