@@ -2718,15 +2718,19 @@ body.faq article {
 body.sizing article {
   max-width: 1200px;
   margin: 0 auto; }
-body.sizing #pgc-565-0-0 {
+body.sizing #pgc-565-0-0,
+body.sizing #pgc-9-0-0 {
   position: fixed; }
   @media (max-width: 768px) {
-    body.sizing #pgc-565-0-0 {
+    body.sizing #pgc-565-0-0,
+    body.sizing #pgc-9-0-0 {
       position: static; } }
-body.sizing #pgc-565-0-1 {
+body.sizing #pgc-565-0-1,
+body.sizing #pgc-9-0-1 {
   margin-left: 25%; }
   @media (max-width: 768px) {
-    body.sizing #pgc-565-0-1 {
+    body.sizing #pgc-565-0-1,
+    body.sizing #pgc-9-0-1 {
       margin: 0; } }
 body.sizing .chart {
   padding: 10px;
