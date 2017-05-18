@@ -540,6 +540,22 @@ body.my-account {
 
 body.faq {
 	article {
+		#pgc-9-0-0 {
+			position: fixed;
+
+			@media (max-width: 768px) { 
+				position: static;
+			}
+		}
+
+		#pgc-9-0-1 {
+			margin-left: 25%;
+
+			@media (max-width: 768px) { 
+				margin: 0;
+			}
+		}
+
 		width: 55%;
 		ul {
 			list-style: none;

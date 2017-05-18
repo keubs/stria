@@ -2665,6 +2665,16 @@ body.my-account #post-161 {
 
 body.faq article {
   width: 55%; }
+  body.faq article #pgc-9-0-0 {
+    position: fixed; }
+    @media (max-width: 768px) {
+      body.faq article #pgc-9-0-0 {
+        position: static; } }
+  body.faq article #pgc-9-0-1 {
+    margin-left: 25%; }
+    @media (max-width: 768px) {
+      body.faq article #pgc-9-0-1 {
+        margin: 0; } }
   body.faq article ul {
     list-style: none;
     padding: 0; }
