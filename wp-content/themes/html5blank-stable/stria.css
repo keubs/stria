@@ -2796,7 +2796,11 @@ footer #mailchimpsf_widget-2 {
     text-transform: uppercase;
     font-size: 16.5px; }
   footer #mailchimpsf_widget-2 #mc_signup_submit {
-    margin-top: 10px; }
+    margin-top: 10px;
+    background: #333;
+    color: #FFF;
+    border: none;
+    border-radius: 10px; }
   footer #mailchimpsf_widget-2 label[for=mc_mv_EMAIL] {
     display: none; }
   footer #mailchimpsf_widget-2 .mc_merge_var {
