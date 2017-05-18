@@ -556,7 +556,7 @@ body.faq {
 			}
 		}
 
-		width: 55%;
+		
 		ul {
 			list-style: none;
 			padding: 0;
@@ -638,8 +638,7 @@ body.sizing{
 	}
 
 
-	#pgc-565-0-0,
-	#pgc-9-0-0 {
+	#pgc-565-0-0 {
 		position: fixed;
 
 		@media (max-width: 768px) { 
@@ -647,8 +646,7 @@ body.sizing{
 		}
 	}
 
-	#pgc-565-0-1,
-	#pgc-9-0-1 {
+	#pgc-565-0-1 {
 		margin-left: 25%;
 
 		@media (max-width: 768px) { 
