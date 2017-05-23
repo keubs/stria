@@ -2736,8 +2736,7 @@ body.sizing #pgc-565-0-0 {
     padding: 0;
     list-style: none; }
     body.sizing #pgc-565-0-0 ul ul {
-      padding: 0 0 0 5px;
-      list-style-type: circle; }
+      padding: 0 0 0 15px; }
   @media (max-width: 768px) {
     body.sizing #pgc-565-0-0 {
       position: static; } }
