@@ -2732,6 +2732,12 @@ body.sizing article {
   margin: 0 auto; }
 body.sizing #pgc-565-0-0 {
   position: fixed; }
+  body.sizing #pgc-565-0-0 ul {
+    padding: 0;
+    list-style: none; }
+    body.sizing #pgc-565-0-0 ul ul {
+      padding: 0 0 0 5px;
+      list-style: none; }
   @media (max-width: 768px) {
     body.sizing #pgc-565-0-0 {
       position: static; } }

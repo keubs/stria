@@ -646,6 +646,16 @@ body.sizing{
 	#pgc-565-0-0 {
 		position: fixed;
 
+		ul {
+			padding: 0;
+			list-style: none;
+
+			ul {
+				padding:  0 0 0 5px;
+				list-style: none;
+			}
+		}
+
 		@media (max-width: 768px) { 
 			position: static;
 		}
