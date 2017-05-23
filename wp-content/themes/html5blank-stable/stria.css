@@ -2728,8 +2728,7 @@ body.faq article ul {
 =            sizing page            =
 ===================================*/
 body.sizing article {
-  max-width: 1200px;
-  margin: 0 auto; }
+  max-width: 1200px; }
 body.sizing #pgc-565-0-0 {
   position: fixed; }
   body.sizing #pgc-565-0-0 ul {
