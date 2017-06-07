@@ -2538,6 +2538,9 @@ body.page-id-175 main h1 {
 =====================================*/
 body.woocommerce-checkout input {
   padding: 10px 5px; }
+body.woocommerce-checkout .woocommerce form .form-row .input-checkbox {
+  margin: 0px 8px 0 0;
+  position: relative; }
 
 /*=====  End of Checkout page  ======*/
 /*====================================
