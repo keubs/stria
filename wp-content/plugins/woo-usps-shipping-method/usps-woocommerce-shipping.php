@@ -3,7 +3,7 @@
 	Plugin Name: USPS (BASIC) WooCommerce Shipping
 	Plugin URI: https://www.xadapter.com/product/woocommerce-usps-shipping-plugin-with-print-label/
 	Description: Obtain real time Shipping Rates via the USPS Shipping API.
-	Version: 1.1.9
+	Version: 1.1.10
 	Author: XAdapter
 	Author URI: https://www.xadapter.com/
 	https://www.usps.com/webtools/htm/Rate-Calculators-v1-5.htm

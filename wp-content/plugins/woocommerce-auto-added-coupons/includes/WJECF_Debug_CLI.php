@@ -4,13 +4,84 @@ defined('ABSPATH') or die();
 
 class WJECF_Debug_CLI extends WP_CLI_Command {
 
-    /**
-     * Display some debugging information
-     */
-    public function debug() {
-        WP_CLI::log( sprintf("WJECF Version: %s", WJECF()->version ) );
+    public static function add_command() {
+        if ( defined( 'WP_CLI' ) && WP_CLI ) {
+            WP_CLI::add_command( 'wjecf', __CLASS__ );
+        }
+    }
 
-        $coupon = WJECF_WC()->get_coupon('auto-cheapest-item');
+    public function plugin_info() {
+        WP_CLI::log( sprintf("WJECF Version: %s", WJECF()->plugin_version() ) );
+        WP_CLI::log( sprintf("WJECF File: %s", WJECF()->plugin_file() ) );
+        WP_CLI::log( sprintf("WJECF Url: %s", WJECF()->plugin_url() ) );
+
+    }
+
+    public function test_api( $args ) {
+        require_once( 'pro/wjecf-pro-api-example.php' );
+
+        if ( count( $args ) > 0 ) {
+            $all = $args;
+        } else {
+            $all = WJECF_API()->get_all_auto_coupons();
+        }
+
+        foreach( $all as $coupon ) {
+            $values = WJECF_API_Test_Coupon( $coupon );
+            foreach( $values as $key => $value ) {
+                WP_CLI::log( sprintf( "%s: %s", $key, print_r( $value, true ) ) );
+            }
+        }
+    }
+
+    /**
+     * Test the sanitizers
+     */
+    public function test_sanitizer() {
+        $array_tests = array(
+            array(),
+            array(0),
+            array(1,0,2.0,"3")
+        );
+        foreach( $array_tests as $array ) {
+            $comma = join( ',', $array );
+            $ints_array = array_map( 'intval', $array);
+            $ints_comma = join( ',', $ints_array );
+
+            $this->single_test_sanitizer( $comma, 'int[]', $ints_array );
+            $this->single_test_sanitizer( $array, 'int[]', $ints_array );
+
+            $this->single_test_sanitizer( $comma, 'int,', $ints_comma );
+            $this->single_test_sanitizer( $array, 'int,', $ints_comma );
+        }
+
+        $this->single_test_sanitizer( null, 'int[]', array() );
+
+        $this->single_test_sanitizer( null, 'int,', '' );
+        $this->single_test_sanitizer( '', 'int,', '' );
+
+        $this->single_test_sanitizer( null, 'int', null );
+        $this->single_test_sanitizer( '', 'int', null );
+        $this->single_test_sanitizer( '1.234', 'int', 1 );
+
+        $this->single_test_sanitizer( '1.234', 'decimal', '1.234' );
+        $this->single_test_sanitizer( null, 'decimal', null );
+    }
+
+    private function single_test_sanitizer( $value, $rule, $expected ) {
+        //$msg = sprintf( "Sanitized %s: %s to %s", $rule, print_r( $value, true ), print_r( $expected, true ) );
+        $msg = sprintf( 
+            "Sanitized %s: %s to %s", 
+            $rule, $value === null ? 'null' : $value, 
+            $expected === null ? 'null' : $expected
+        );
+        $this->assert( WJECF()->sanitizer()->sanitize( $value, $rule ) === $expected, $msg);
+
+    }
+    /**
+     * Tests if the wrappers return the same values for WooCommerce 3.0 and older WC versions
+     */
+    public function test_wrappers() {
 
         $args = array(
             'posts_per_page'   => -1,
@@ -37,6 +108,12 @@ class WJECF_Debug_CLI extends WP_CLI_Command {
             $product = wc_get_product( $post->ID );
             $this->execute_test_for_product( $product );
         }
+
+        $msg = sprintf("%d tests executed. Fails: %d  Passes: %d", $this->tests, $this->fails, $this->passes );
+        if ( $this->fails != 0 )
+            WP_CLI::error( $msg );
+        else 
+            WP_CLI::success( $msg );
 
     }
 
@@ -81,7 +158,7 @@ class WJECF_Debug_CLI extends WP_CLI_Command {
             $results = array();
             $results['new'] = $wrap_new->get_product_or_variation_id();
             $results['legacy'] = $wrap_leg->get_product_or_variation_id();
-            $results['old'] = $product->variation_id;        
+            $results['old'] = $product->variation_id;
             $this->assert_same( $results, sprintf('Same variation id %s', current( $results ) ) );
 
             $results = array();
@@ -101,6 +178,18 @@ class WJECF_Debug_CLI extends WP_CLI_Command {
 
     }    
 
+    protected $tests = 0;
+    protected $fails = 0;
+    protected $passess = 0;
+
+    protected function assert( $true, $test_description ) {
+        if ( $true !== true ) {
+            WP_CLI::error( $test_description );
+            die();
+        }
+        WP_CLI::success( $test_description );
+    }
+
     protected function assert_same( $results, $test_description ) {
         $success = true;
         foreach( $results as $result ) {
@@ -111,9 +200,13 @@ class WJECF_Debug_CLI extends WP_CLI_Command {
             $prev_result = $result;
         }
 
+        $this->tests++;
+
         if ( $success ) {
+            $this->passes++;
             WP_CLI::success( $test_description );
         } else {
+            $this->fails++;
             foreach( $results as $key => $result ) {
                 WP_CLI::log( sprintf("%s : %s", $key, $this->dd( $result ) ) );
             }
@@ -125,17 +218,4 @@ class WJECF_Debug_CLI extends WP_CLI_Command {
         return print_r( $variable, true );
     }
 
-
-//    /**
-//     * Display expiry information for the given product.
-//     * 
-//      * ## OPTIONS
-//     *
-//     * <product_id>...
-//     * : The product ID.
-//     * 
-//     */
-//    public function product( $args ) {
-//    }
-    
 }

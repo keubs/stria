@@ -4,7 +4,7 @@
  * Plugin Name: Enhanced Catalog Images for WooCommerce
  * Plugin URI: https://iconicwp.com
  * Description: Enhance your WooCommerce catalog images with multiple effects.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Iconic <support@iconicwp.com>
  * Author URI: https://iconicwp.com
  * Text Domain: iconic-woo-enhanced-catalog-images
@@ -64,7 +64,7 @@ class Iconic_Woo_Enhanced_Catalog_Images
      * @access protected
      * @var string $version
      */
-    protected  $version = '1.0.0' ;
+    protected  $version = '1.0.1' ;
     /**
      * Plugin path
      *
@@ -105,7 +105,6 @@ class Iconic_Woo_Enhanced_Catalog_Images
         $this->textdomain();
         $this->set_constants();
         $this->load_classes();
-        $this->load_dashboard();
         $this->init_settings();
         add_action( 'init', array( $this, 'initiate_hook' ) );
     }
@@ -169,17 +168,6 @@ class Iconic_Woo_Enhanced_Catalog_Images
                 require $file;
             }
         }
-    }
-    
-    /**
-     * Load dashboard
-     */
-    public function load_dashboard()
-    {
-        if ( !is_admin() ) {
-            return;
-        }
-        Iconic_Dashboard::instance();
     }
     
     /**
@@ -257,11 +245,6 @@ class Iconic_Woo_Enhanced_Catalog_Images
     public function dynamic_css()
     {
         $effect = $this->settings['general_display_effect'];
-        if(!isset($this->settings['effects_thumbnails_column_count'])){
-            $cols = 3;
-        } else {
-            $cols = $this->settings['effects_thumbnails_column_count'];
-        }
         $css = array(
             'fade'               => array(
             '.iconic-ecifw-product-image--fade img:first-child' => array(
@@ -296,7 +279,7 @@ class Iconic_Woo_Enhanced_Catalog_Images
         ),
             '.iconic-ecifw-product-image__thumbnails li' => array(
             'padding' => sprintf( '0 %dpx %dpx', $this->settings['effects_thumbnails_spacing'] / 2, $this->settings['effects_thumbnails_spacing'] ),
-            'width'   => sprintf( '%.04f%%', 100 / $cols ),
+            'width'   => sprintf( '%.04f%%', 100 / $this->settings['effects_thumbnails_column_count'] ),
         ),
         ),
             'flip-premium'       => array(
@@ -420,6 +403,7 @@ class Iconic_Woo_Enhanced_Catalog_Images
     public function remove_actions()
     {
         remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+        remove_action( 'woocommerce_before_shop_loop_item_title', 'x_woocommerce_shop_product_thumbnails', 10 );
         remove_action( 'woocommerce_before_shop_loop_item_title', 'avia_woocommerce_thumbnail', 10 );
     }
     
@@ -460,7 +444,7 @@ class Iconic_Woo_Enhanced_Catalog_Images
         // Featured image
         $images[] = $this->get_product_thumbnail( $image_size );
         // Gallery images
-        $attachment_ids = $product->get_gallery_attachment_ids();
+        $attachment_ids = Iconic_ECIFW_Product::get_gallery_image_ids( $product );
         
         if ( $this->settings['general_display_effect'] == 'modal-premium' ) {
             $image_size = apply_filters( 'iconic_ecifw_large_size', 'large' );
@@ -488,16 +472,16 @@ class Iconic_Woo_Enhanced_Catalog_Images
                 if ( count( $images ) == $count ) {
                     break;
                 }
-                $props = wc_get_product_attachment_props( $attachment_id, $post );
+                $props = array();
                 
                 if ( $large_image_size ) {
                     $large_image = wp_get_attachment_image_src( $attachment_id, $large_image_size );
                     if ( $large_image ) {
-                        $props = array_merge( array(
+                        $props = array(
                             'data-large-image'        => $large_image[0],
                             'data-large-image-srcset' => wp_get_attachment_image_srcset( $attachment_id, $large_image_size ),
                             'data-large-image-sizes'  => wp_get_attachment_image_sizes( $attachment_id, $large_image_size ),
-                        ), $props );
+                        );
                     }
                 }
                 

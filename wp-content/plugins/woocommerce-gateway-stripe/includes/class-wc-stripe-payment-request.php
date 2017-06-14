@@ -162,7 +162,12 @@ class WC_Stripe_Payment_Request {
 			WC()->customer->set_shipping_to_base();
 		}
 
-		WC()->customer->calculated_shipping( true );
+		if ( version_compare( WC_VERSION, '3.0', '<' ) ) {
+			WC()->customer->calculated_shipping( true );
+		} else {
+			WC()->customer->set_calculated_shipping( true );
+			WC()->customer->save();
+		}
 
 		$packages = array();
 
@@ -289,6 +294,8 @@ class WC_Stripe_Payment_Request {
 		if ( ! defined( 'WOOCOMMERCE_CHECKOUT' ) ) {
 			define( 'WOOCOMMERCE_CHECKOUT', true );
 		}
+		
+		$_POST['terms'] = 1;
 
 		WC()->checkout()->process_checkout();
 

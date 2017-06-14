@@ -306,7 +306,7 @@ if( !class_exists('WordPressSettingsFramework') ){
 
                     if($section['section_id'] == $args['id']){
 
-                        if(isset($section['section_description']) && $section['section_description']) echo '<p class="wpsf-section-description">'. $section['section_description'] .'</p>';
+                        if(isset($section['section_description']) && $section['section_description']) echo '<div class="wpsf-section-description">'. $section['section_description'] .'</div>';
                         break;
 
                     }
@@ -836,7 +836,7 @@ if( !class_exists('WordPressSettingsFramework') ){
 
             do_action( 'wpsf_before_settings_'.$this->option_group );
             ?>
-            <form action="options.php" method="post">
+            <form action="options.php" method="post" novalidate>
                 <?php do_action( 'wpsf_before_settings_fields_'.$this->option_group ); ?>
                 <?php settings_fields( $this->option_group ); ?>
 

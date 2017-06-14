@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5T9XQ
 Tags: woocommerce, coupons, discount
 Requires at least: 4.0.0
 Tested up to: 4.7.3
-Stable tag: 2.4.3
+Stable tag: 2.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,6 +105,29 @@ Sure! [This](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5T9XQ
 4. Additionals restrictions based on shipping or payment method or the customer
 
 == Changelog ==
+
+= 2.5.1 =
+* (PRO) FEATURE: Free product selection using checkboxes / numeric inputs
+* (PRO) FIX: Free product selection fails if coupon code contains a space
+* FIX: Draft settings not being saved
+* FIX: PHP < 5.5 compatibility
+* FIX: Abstract_WJECF_Plugin log function
+* INTERNAL: Functions add_action_once / add_filter_once. To guarantee execution only once.
+* INTERNAL: Updated the API example; also usable from CLI
+* INTERNAL: Created Sanitizer for form data handling
+* INTERNAL: Reorganised coupon meta handling ( Abstract_WJECF_Plugin::admin_coupon_meta_fields )
+
+= 2.5.0 =
+* (PRO) FEATURE: Auto update!
+* (PRO) FEATURE: Checkbox 'Allow applying coupon when invalid'
+* (PRO) FEATURE: Custom message when applying a coupon which does not yet validate
+* FEATURE: Settings page
+* FEATURE REMOVED: Experimental feature 'Allow when minimum spend not reached' (Use 'Allow applying coupon when invalid' instead)
+* COSMETIC: Products tab is now 'Free Products' tab. Moved other items to the 'Usage restriction'-tab
+* FIX: Issue with 'Allow discount on cart with excluded items'
+* FIX: Notice if a free product without weight is added/removed to/from the cart
+* FIX: Deprecation notice in WJECF_AutoCoupon::sort_auto_coupons
+* INTERNAL: Introduced 'allow_overwrite_coupon_values'
 
 = 2.4.3 =
 * FIX: Customer selector WooCommerce 3.0.0 compatibility

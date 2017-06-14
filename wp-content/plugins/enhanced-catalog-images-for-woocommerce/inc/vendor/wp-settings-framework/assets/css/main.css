@@ -28,7 +28,7 @@
     }
 
     .wpsf-tab .postbox h2 {
-        padding: 15px 2%;
+        padding: 15px 30px;
         border: none;
         margin: 0 0 20px;
         background: #23282d;
@@ -50,8 +50,8 @@
 
     .wpsf-tab .postbox table.form-table,
     .wpsf-tab .wpsf-section-description {
-        margin: 0 2%;
-        width: 96%;
+        margin: 0 30px;
+        width: auto;
     }
 
     .wpsf-tab .postbox table.form-table {
@@ -60,10 +60,30 @@
 
     .wpsf-tab .wpsf-section-description {
         margin-top: 20px;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #eeeeee;
+        margin-bottom: 25px;
+        padding: 35px 25px;
+        box-sizing: border-box;
+        font-size: 13px;
+        line-height: 1.5;
     }
+
+        .wpsf-tab .wpsf-section-description h3 {
+            font-size: 22px;
+            max-width: 600px;
+        }
+
+        .wpsf-tab .wpsf-section-description p {
+            font-size: 15px;
+            max-width: 600px;
+        }
+
+        .wpsf-tab .wpsf-section-description p:first-of-type {
+            font-size: 17px;
+        }
+
+        .wpsf-tab .wpsf-section-description :last-child {
+            margin-bottom: 0;
+        }
 
 /* $. Repeater */
 

@@ -8,9 +8,9 @@ Tags: USPS, USPS Shipping, Shipping rates, shipping method, shipping extension,c
 
 Requires at least: 3.0.1
 
-Tested up to: 4.7
+Tested up to: 4.8
 
-Stable tag: 1.1.9
+Stable tag: 1.1.10
 
 License: GPLv2 or later
 
@@ -133,6 +133,11 @@ You can enable debug in settings and debug messages will start showing up in car
 
 
 == Changelog ==
+
+= 1.1.10 =
+
+ *Tested in WP 4.8
+
 = 1.1.9 =
 
  * Minor Content Changed.
@@ -184,6 +189,10 @@ You can enable debug in settings and debug messages will start showing up in car
 
 
 == Upgrade Notice ==
+= 1.1.10 =
+
+ *Tested in WP 4.8
+
 = 1.1.9 =
 
  * Minor Content Changed.

@@ -27,7 +27,7 @@ function iconic_ecifw_fs()
             'support' => false,
             'pricing' => false,
             'parent'  => array(
-            'slug' => 'iconicwp',
+            'slug' => 'woocommerce',
         ),
         ),
             'is_live'        => true,
@@ -93,21 +93,6 @@ function iconic_ecifw_output_freemius_notices()
 
 add_action( 'wpsf_before_settings_iconic_ecifw', 'iconic_ecifw_output_freemius_notices', 10 );
 /**
- * Highlight admin top level and submenu when viewing freemius pages
- */
-function iconic_ecifw_menu_highlight()
-{
-    global  $plugin_page, $submenu_file ;
-    
-    if ( iconic_ecifw_is_settings_page() ) {
-        $submenu_file = 'iconic-ecifw-settings';
-        $plugin_page = 'iconicwp';
-    }
-
-}
-
-add_action( 'admin_head', 'iconic_ecifw_menu_highlight' );
-/**
  * Check if we're on the plugin's settings page
  */
 function iconic_ecifw_is_settings_page()
@@ -120,17 +105,3 @@ function iconic_ecifw_is_settings_page()
     }
     return true;
 }
-
-/**
- * Inject custom pricing page styles
- */
-function iconic_ecifw_freemius_styles()
-{
-    if ( !iconic_ecifw_is_settings_page() ) {
-        return;
-    }
-    global  $iconic_woo_enhanced_catalog_images ;
-    $_GET['custom_css'] = $iconic_woo_enhanced_catalog_images->plugin_url . 'assets/admin/css/freemius.css';
-}
-
-add_action( 'admin_head', 'iconic_ecifw_freemius_styles' );

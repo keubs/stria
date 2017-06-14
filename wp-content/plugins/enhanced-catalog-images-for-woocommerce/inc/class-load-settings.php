@@ -91,7 +91,7 @@ class Iconic_ECIFW_Load_Settings {
     public function add_settings_page() {
 
         $this->settings_framework->add_settings_page( array(
-            'parent_slug' => 'iconicwp',
+            'parent_slug' => 'woocommerce',
             'page_title' => $this->name,
             'menu_title' => $this->shortname,
             'capability' => 'manage_woocommerce'

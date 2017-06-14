@@ -3,57 +3,24 @@
  * Plugin Name: WooCommerce Extended Coupon Features
  * Plugin URI: http://www.soft79.nl
  * Description: Additional functionality for WooCommerce Coupons: Apply certain coupons automatically, allow applying coupons via an url, etc...
- * Version: 2.4.3
+ * Version: 2.5.1
  * Author: Soft79
  * License: GPL2
  */
  
+if ( ! defined('WJECF_VERSION') ) define ('WJECF_VERSION', '2.5.1');
+
 // Changelog: see readme.txt
 
 /*
  TODO:
- - stop using get_plugin_data
- - WORK IN PROGRESS: Admin page: Option to enable/disable functionality
- - Admin page: Enable/disable debugging
  - Apply filter for autocoupon individual_use_filter
  - (PRO) Eval
 */
 
 
- 
-defined('ABSPATH') or die();
-
-if ( ! function_exists( 'wjecf_load_plugin_textdomain' ) ) {
-
-    /**
-     * Include the file once if it exists.
-     * @param string $filename
-     * @return void
-     */
-    function wjecf_optional_include( $filename ) {
-        if ( ! file_exists( dirname( __FILE__ ) . '/' . $filename ) ) {
-            return false;
-        }
-
-        include_once( $filename );
-        return true;
-    }
-
-    require_once( 'includes/wjecf-wc.php' );
-    require_once( 'includes/wjecf-controller.php' );
-    require_once( 'includes/abstract-wjecf-plugin.php' );
-    require_once( 'includes/admin/wjecf-admin.php' );
-    require_once( 'includes/admin/wjecf-admin-auto-upgrade.php' );
-    //Optional
-    wjecf_optional_include( 'includes/wjecf-autocoupon.php' );
-    wjecf_optional_include( 'includes/wjecf-wpml.php' );
-    //PRO
-    wjecf_optional_include( 'includes/wjecf-pro-controller.php' );
-    wjecf_optional_include( 'includes/wjecf-pro-free-products.php' );
-    wjecf_optional_include( 'includes/wjecf-pro-coupon-queueing.php' );
-    wjecf_optional_include( 'includes/wjecf-pro-product-filter.php' );
-    wjecf_optional_include( 'includes/wjecf-pro-limit-discount-quantities.php' );
-    wjecf_optional_include( 'includes/wjecf-pro-api.php' );    
+if ( ! defined('ABSPATH') ) die();
+if ( ! function_exists( 'wjecf_load_plugin_textdomain' ) ) {   
 
     //Translations
     add_action( 'plugins_loaded', 'wjecf_load_plugin_textdomain' );
@@ -62,66 +29,60 @@ if ( ! function_exists( 'wjecf_load_plugin_textdomain' ) ) {
 
         load_textdomain( 'woocommerce-jos-autocoupon', WP_LANG_DIR . '/woocommerce-jos-autocoupon/woocommerce-jos-autocoupon-' . $locale . '.mo' );        
         load_plugin_textdomain('woocommerce-jos-autocoupon', false, basename(dirname(__FILE__)) . '/languages/' );
+    }
 
-        // //WP-cli for debugging
-        // if ( defined( 'WP_CLI' ) && WP_CLI ) {
-        //     if ( wjecf_optional_include('includes/WJECF_Debug_CLI.php') ) {
-        //         WP_CLI::add_command( 'wjecf', 'WJECF_Debug_CLI' );
-        //     }
-        // }
-
-        // Only Initiate the plugin if WooCommerce is active
-        if ( WJECF_WC::instance()->get_woocommerce_version() == false ) {
-            add_action( 'admin_notices', 'wjecf_admin_notice' );
-            function wjecf_admin_notice() {
-                $msg = __( 'WooCommerce Extended Coupon Features is disabled because WooCommerce could not be detected.', 'woocommerce-jos-autocoupon' );
-                echo '<div class="error"><p>' . $msg . '</p></div>';
-            }
-        } else {    
-
-            function WJECF_WC() {
-                return WJECF_WC::instance();
-            }        
-
-            function WJECF_Wrap( $object ) {
-                return WJECF_WC::instance()->wrap( $object );
-            }
-
-            /**
-             * Get the instance of WJECF
-             * @return WJECF_Controller|WJECF_Pro_Controller The instance of WJECF
-             */
-            function WJECF() {
-                if ( class_exists( 'WJECF_Pro_Controller' ) ) { 
-                    return WJECF_Pro_Controller::instance();
-                } else {
-                    return WJECF_Controller::instance();
-                }
-            }
-
-            /**
-             * Get the instance of WJECF_Admin
-             * @return WJECF_Admin The instance of WJECF_Admin
-             */
-            function WJECF_ADMIN() {
-                return WJECF()->get_plugin('WJECF_Admin');
-            }
-
-            $wjecf_extended_coupon_features = WJECF();
-
-            WJECF()->add_plugin('WJECF_Admin');
-            WJECF()->add_plugin('WJECF_Admin_Auto_Upgrade');
-            WJECF()->add_plugin('WJECF_AutoCoupon');
-            WJECF()->add_plugin('WJECF_WPML');
-            if ( WJECF()->is_pro() ) {
-                WJECF()->add_plugin('WJECF_Pro_Free_Products');
-                WJECF()->add_plugin('WJECF_Pro_Coupon_Queueing');
-                WJECF()->add_plugin('WJECF_Pro_Product_Filter');
-                WJECF()->add_plugin('WJECF_Pro_Limit_Discount_Quantities');
-            }
-            WJECF()->start();
+    /**
+     * Get the instance of WJECF
+     * @return WJECF_Controller|WJECF_Pro_Controller The instance of WJECF
+     */
+    function WJECF() {
+        if ( class_exists( 'WJECF_Pro_Controller' ) ) { 
+            return WJECF_Pro_Controller::instance();
+        } else {
+            return WJECF_Controller::instance();
         }
     }
+
+    /**
+     * Get the instance of WJECF_Admin
+     * @return WJECF_Admin The instance of WJECF_Admin
+     */
+    function WJECF_ADMIN() {
+        return WJECF()->get_plugin('WJECF_Admin');
+    }
+
+    /**
+     * Get the instance of WJECF_WC
+     * @return WJECF_WC The instance of WJECF_WC
+     */
+    function WJECF_WC() {
+        return WJECF_WC::instance();
+    }
+
+    /**
+     * Get the instance if the WooCommerce Extended Coupon Features API
+     * @return WJECF_Pro_API The API object
+     */
+    function WJECF_API() {
+        return WJECF_Pro_API::instance();
+    }       
+
+    /**
+     * Wraps a product or coupon in a decorator
+     * @param mixed $object The WC_Coupon or WC_Product instance, or the post id
+     * @return WJECF_Wrap
+     */
+    function WJECF_Wrap( $object ) {
+        return WJECF_WC::instance()->wrap( $object );
+    }
+
+    require_once( 'includes/WJECF_Bootstrap.php' );
+    
+    WJECF_Bootstrap::execute();
+
+    //DEPRECATED. We keep $wjecf_extended_coupon_features for backwards compatibility; use WJECF_API()
+    $wjecf_extended_coupon_features = WJECF();
+
 
 }
 

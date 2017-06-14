@@ -279,7 +279,7 @@ class WC_Stripe_Apple_Pay extends WC_Gateway_Stripe {
 			'key'                                           => $this->publishable_key,
 			'currency_code'                                 => get_woocommerce_currency(),
 			'country_code'                                  => substr( get_option( 'woocommerce_default_country' ), 0, 2 ),
-			'label'                                         => $this->statement_descriptor,
+			'label'                                         => $this->statement_descriptor . ' (via WooCommerce)',
 			'ajaxurl'                                       => WC_AJAX::get_endpoint( '%%endpoint%%' ),
 			'stripe_apple_pay_nonce'                        => wp_create_nonce( '_wc_stripe_apple_pay_nonce' ),
 			'stripe_apple_pay_cart_nonce'                   => wp_create_nonce( '_wc_stripe_apple_pay_cart_nonce' ),
@@ -316,7 +316,7 @@ class WC_Stripe_Apple_Pay extends WC_Gateway_Stripe {
 			'key'                                           => $this->publishable_key,
 			'currency_code'                                 => get_woocommerce_currency(),
 			'country_code'                                  => substr( get_option( 'woocommerce_default_country' ), 0, 2 ),
-			'label'                                         => $this->statement_descriptor,
+			'label'                                         => $this->statement_descriptor . ' (via WooCommerce)',
 			'ajaxurl'                                       => WC_AJAX::get_endpoint( '%%endpoint%%' ),
 			'stripe_apple_pay_nonce'                        => wp_create_nonce( '_wc_stripe_apple_pay_nonce' ),
 			'stripe_apple_pay_cart_nonce'                   => wp_create_nonce( '_wc_stripe_apple_pay_cart_nonce' ),
@@ -399,7 +399,7 @@ class WC_Stripe_Apple_Pay extends WC_Gateway_Stripe {
 
 		?>
 		<div class="apple-pay-button-wrapper">
-			<button class="apple-pay-button" lang="<?php echo esc_attr( $this->apple_pay_button_lang ); ?>" style="-webkit-appearance: -apple-pay-button; -apple-pay-button-type: buy; -apple-pay-button-style: <?php echo esc_attr( $this->apple_pay_button ); ?>;"></button>
+			<button class="apple-pay-button" lang="<?php echo esc_attr( $this->apple_pay_button_lang ); ?>" style="-webkit-appearance: -apple-pay-button; -apple-pay-button-type: buy; -apple-pay-button-style: <?php echo esc_attr( $this->apple_pay_button ); ?>;" alt="<?php esc_attr_e( 'Buy with Apple Pay', 'woocommerce-gateway-stripe' ); ?>"></button>
 		</div>
 		<?php
 	}
@@ -539,7 +539,9 @@ class WC_Stripe_Apple_Pay extends WC_Gateway_Stripe {
 			WC()->customer->set_shipping_to_base();
 		}
 
-		WC()->customer->calculated_shipping( true );
+		version_compare( WC_VERSION, '3.0', '<' ) ? WC()->customer->calculated_shipping( true ) : WC()->customer->set_calculated_shipping( true );
+
+		WC()->customer->save();
 
 		/**
 		 * Set the shipping package.
@@ -830,9 +832,11 @@ class WC_Stripe_Apple_Pay extends WC_Gateway_Stripe {
 			$subtotal       += $cart_item['line_subtotal'];
 			$quantity_label = 1 < $cart_item['quantity'] ? ' (x' . $cart_item['quantity'] . ')' : '';
 
+			$product_name = version_compare( WC_VERSION, '3.0', '<' ) ? $cart_item['data']->post->post_title : $cart_item['data']->get_name();
+
 			$item = array(
 				'type'   => 'final',
-				'label'  => $cart_item['data']->post->post_title . $quantity_label,
+				'label'  => $product_name . $quantity_label,
 				'amount' => wc_format_decimal( $amount, $decimals ),
 			);
 
@@ -1096,19 +1100,28 @@ class WC_Stripe_Apple_Pay extends WC_Gateway_Stripe {
 
 		$available_gateways = WC()->payment_gateways->get_available_payment_gateways();
 		$order->set_payment_method( $available_gateways['stripe'] );
-		$order->set_total( WC()->cart->shipping_total, 'shipping' );
-		$order->set_total( WC()->cart->get_cart_discount_total(), 'cart_discount' );
-		$order->set_total( WC()->cart->get_cart_discount_tax_total(), 'cart_discount_tax' );
-		$order->set_total( WC()->cart->tax_total, 'tax' );
-		$order->set_total( WC()->cart->shipping_tax_total, 'shipping_tax' );
-		$order->set_total( WC()->cart->total );
-
-		if ( version_compare( WC_VERSION, '3.0', '>=' ) ) {
+		
+		if ( version_compare( WC_VERSION, '3.0', '<' ) ) {
+			$order->set_total( WC()->cart->shipping_total, 'shipping' );
+			$order->set_total( WC()->cart->get_cart_discount_total(), 'cart_discount' );
+			$order->set_total( WC()->cart->get_cart_discount_tax_total(), 'cart_discount_tax' );
+			$order->set_total( WC()->cart->tax_total, 'tax' );
+			$order->set_total( WC()->cart->shipping_tax_total, 'shipping_tax' );
+			$order->set_total( WC()->cart->total );
+		} else {
+			$order->set_shipping_total( WC()->cart->shipping_total );
+			$order->set_discount_total( WC()->cart->get_cart_discount_total() );
+			$order->set_discount_tax( WC()->cart->get_cart_discount_tax_total() );
+			$order->set_cart_tax( WC()->cart->tax_total );
+			$order->set_shipping_tax( WC()->cart->shipping_tax_total );
+			$order->set_total( WC()->cart->total );
 			$order->save();
 		}
 
 		// If we got here, the order was created without problems!
 		wc_transaction_query( 'commit' );
+
+		do_action( 'woocommerce_checkout_update_order_meta', $order_id, array() );
 
 		return $order;
 	}
