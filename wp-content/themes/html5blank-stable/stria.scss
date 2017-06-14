@@ -319,10 +319,10 @@ body.page-id-175 main h1 {
 =            Checkout page            =
 =====================================*/
 
-body.woocommerce-checkout {
+body.woocommerce-checkout form.woocommerce-checkout {
 	input {
 		font-size: 20px;
-		padding: 15px 5px;
+		padding: 10px 5px;
 	}
 
 	.woocommerce form .form-row .input-checkbox {
@@ -346,6 +346,16 @@ body.product-template-default.woocommerce-page {
 		min-width: 400px;
 		float: none;
 		display: inline-block;
+
+
+		.quantity {
+			width: 100%;
+			margin: .5em 0 1em;
+
+			input {
+				width: 100%;
+			}
+		}
 
 		@media (max-width: 768px) { 
 			margin-top: 1.5em;
