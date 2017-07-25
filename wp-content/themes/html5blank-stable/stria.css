@@ -2518,7 +2518,8 @@ body.page-id-175 main h1 {
   font-weight: bold;
   margin: .5em 0;
   background: #000;
-  color: #FFF; }
+  color: #FFF;
+  line-height: 85px !important; }
   @media (max-width: 768px) {
     body.page-id-175 main h1 {
       font-size: 35px;
@@ -2540,13 +2541,17 @@ body.woocommerce-checkout form.woocommerce-checkout input {
   font-size: 20px;
   padding: 10px 5px; }
 body.woocommerce-checkout form.woocommerce-checkout .woocommerce form .form-row .input-checkbox {
-  margin: 0px 8px 0 0;
-  position: relative; }
+  margin: 0px 8px 0 0 !important;
+  position: relative !important; }
 
 /*=====  End of Checkout page  ======*/
 /*====================================
 =            Product page            =
 ====================================*/
+body.product-template-default.woocommerce-page .wc-tabs-wrapper {
+  max-width: 75%; }
+body.product-template-default.woocommerce-page #reviews {
+  max-width: 500px; }
 body.product-template-default.woocommerce-page #content .type-product.product .summary {
   width: 20%;
   min-width: 400px;

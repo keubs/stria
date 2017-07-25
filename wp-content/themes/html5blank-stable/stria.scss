@@ -293,6 +293,7 @@ body.page-id-175 main h1 {
 	margin: .5em 0;
 	background: #000;
 	color: #FFF;
+	line-height: 85px !important;
 
 	@media (max-width: 768px) {
 		font-size: 35px;
@@ -326,8 +327,8 @@ body.woocommerce-checkout form.woocommerce-checkout {
 	}
 
 	.woocommerce form .form-row .input-checkbox {
-		margin: 0px 8px 0 0;
-		position: relative;
+		margin: 0px 8px 0 0 !important;
+		position: relative !important;
 	}
 }
 
@@ -341,6 +342,14 @@ body.woocommerce-checkout form.woocommerce-checkout {
 body.product-template-default.woocommerce-page {
 	// background: #289320;
 
+
+	.wc-tabs-wrapper {
+		max-width: 75%;
+	}
+	
+	#reviews {
+		max-width: 500px;
+	}
 	#content .type-product.product .summary {
 		width: 20%;
 		min-width: 400px;

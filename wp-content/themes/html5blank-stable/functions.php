@@ -122,6 +122,21 @@ function html5blank_conditional_scripts()
         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
         wp_enqueue_script('scriptname'); // Enqueue it!
     }
+
+        
+        
+    if ( is_page( 'get-fitted' ) ) {
+        wp_register_script('quiz', get_template_directory_uri() . '/quiz/js/main.js', array('jquery'), '1.0.0', true); // Conditional script(s)
+        wp_enqueue_script('quiz'); // Enqueue it!
+
+        wp_register_script('fitted', get_template_directory_uri() . '/js/fitted.js', array('jquery'), '1.0.0', true); // Conditional script(s)
+        wp_enqueue_script('fitted'); // Enqueue it!
+
+        wp_register_style('quizstyle', get_template_directory_uri() . '/quiz/css/main.css', array(), '1.1', 'all');
+        wp_enqueue_style('quizstyle'); // Enqueue it!
+    } else {
+        // enqueue common scripts here
+    }
 }
 
 // Load HTML5 Blank styles
@@ -356,8 +371,8 @@ function html5blankcomments($comment, $args, $depth)
 function woo_remove_product_tabs( $tabs ) {
 
     unset( $tabs['description'] );          // Remove the description tab
-    unset( $tabs['reviews'] );          // Remove the reviews tab
-    unset( $tabs['additional_information'] );   // Remove the additional information tab
+    // unset( $tabs['reviews'] );          // Remove the reviews tab
+    // unset( $tabs['additional_information'] );   // Remove the additional information tab
 
     return $tabs;
 
